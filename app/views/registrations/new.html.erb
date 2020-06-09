@@ -1,0 +1,23 @@
+<h1>Create an account</h1>
+
+<%= form_for @user, url: registrations_path do |f| %>
+  <%- if @user.errors.any? %>
+    <ul class="registrations-errors">
+      <% @user.errors.each do |_, error| %>
+        <li><%= error %></li>
+      <% end %>
+    </ul>
+  <%- end %>
+
+  <div>
+    <%= f.label :email %>
+    <%= f.email_field :email, placeholder: "email@fe.up.pt", required: true %>
+  </div>
+
+  <div>
+    <%= f.label :password %>
+    <%= f.password_field :password, required: true %>
+  </div>
+
+  <%= f.submit %>
+<% end %>

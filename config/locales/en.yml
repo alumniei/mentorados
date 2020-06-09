@@ -31,3 +31,16 @@
 
 en:
   hello: "Hello world"
+
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              taken: "This email address has already been registered"
+              feup_address_required: "You must use an email address ending in @fe.up.pt"
+  helpers:
+    submit:
+      user:
+        create: "Register"
