@@ -13,6 +13,10 @@ class RegistrationsController < ApplicationController
     @user = User.student.confirmation_pending.create(create_params)
 
     if @user.valid?
+      @user.reload
+
+      RegistrationsMailer.with(user: @user).confirmation.deliver_now!
+
       render status: :created
     else
       render :new, status: :bad_request

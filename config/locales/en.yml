@@ -44,3 +44,7 @@ en:
     submit:
       user:
         create: "Register"
+
+  registrations_mailer:
+    confirmation:
+      subject: Welcome to mentor.alumniei.pt
