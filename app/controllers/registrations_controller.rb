@@ -10,16 +10,16 @@ class RegistrationsController < ApplicationController
   end
 
   def create
-    @user = User.student.confirmation_pending.create(create_params)
+    User.transaction do
+      @user = User.student.confirmation_pending.create(create_params)
 
-    if @user.valid?
-      @user.reload
+      if @user.valid?
+        RegistrationsMailer.with(user: @user).confirmation.deliver_now!
 
-      RegistrationsMailer.with(user: @user).confirmation.deliver_now!
-
-      render status: :created
-    else
-      render :new, status: :bad_request
+        render status: :created
+      else
+        render :new, status: :bad_request
+      end
     end
   end
 

@@ -9,6 +9,8 @@ class User < ApplicationRecord
   validates :email, presence: true, uniqueness: { case_sensitive: false }
   validate :validate_feup_email, on: :create, if: -> { student? }
 
+  after_create :reload
+
   has_secure_password
 
   def confirmed?

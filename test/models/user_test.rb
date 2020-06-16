@@ -30,4 +30,10 @@ class UserTest < ActiveSupport::TestCase
 
     assert_not build(:user, :student, email: user.email.upcase).valid?
   end
+
+  test 'user creation includes registration_id' do
+    user = create(:user, :student)
+
+    assert_not_nil user.registration_id
+  end
 end
