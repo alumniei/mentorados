@@ -4,4 +4,6 @@ Rails.application.routes.draw do
       post :confirm
     end
   end
+
+  resources :sessions, only: %i[create new]
 end

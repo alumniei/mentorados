@@ -1,0 +1,23 @@
+<h1>Login</h1>
+
+<%= form_with model: @session, url: sessions_path do |f| %>
+  <%- if @session.errors.any? %>
+    <ul class="sessions-errors">
+      <% @session.errors.each do |_, error| %>
+        <li><%= error %></li>
+      <% end %>
+    </ul>
+  <%- end %>
+
+  <div>
+    <%= f.label :email %>
+    <%= f.email_field :email, placeholder: "email@fe.up.pt", required: true %>
+  </div>
+
+  <div>
+    <%= f.label :password %>
+    <%= f.password_field :password, required: true %>
+  </div>
+
+  <%= f.submit %>
+<% end %>

@@ -32,7 +32,7 @@ class User < ApplicationRecord
   private
 
   def validate_feup_email
-    return if email.split('@').last.downcase == 'fe.up.pt'
+    return if email.split('@').last.casecmp('fe.up.pt').zero?
 
     errors.add(:email, :feup_address_required)
   end
