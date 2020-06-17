@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   end
 
   resources :sessions, only: %i[create new]
+
+  root to: 'home#index'
 end

@@ -1,5 +1,12 @@
 <h1>Create an account</h1>
 
+<p>
+  Registration is this platform is limited to MIEIC students. We restrict this
+  by only allowing sign-ups from @fe.up.pt emails. If you lost your access to
+  your institutional email, please contact us so we can help:
+  <a href='mailto:mentor@alumniei.pt'>mentor@alumniei.pt</a>
+</p>
+
 <%= form_for @user, url: registrations_path do |f| %>
   <%- if @user.errors.any? %>
     <ul class="registrations-errors">
@@ -21,3 +28,7 @@
 
   <%= f.submit %>
 <% end %>
+
+<p>
+  Already have an account yet? <%= link_to t('views.registrations.new.login'), new_session_path %>
+</p>
