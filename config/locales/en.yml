@@ -21,4 +21,8 @@ en:
   views:
     home:
       index:
-        title: Mentorship Program for Software Engineering - FEUP
+        title: AlumniEI mentorship program
+    layout:
+      navigation:
+        logout: Logout
+        profile: Profile

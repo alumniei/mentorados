@@ -1,6 +1,6 @@
 <h1>Login</h1>
 
-<%= form_with model: @session, url: sessions_path do |f| %>
+<%= form_with model: @session, url: session_path do |f| %>
   <%- if @session.errors.any? %>
     <ul class="sessions-errors">
       <% @session.errors.each do |_, error| %>

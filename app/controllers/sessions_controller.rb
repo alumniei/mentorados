@@ -2,6 +2,8 @@
 
 class SessionsController < ApplicationController
   def create
+    authorize :session
+
     @session = Session.create(create_params)
     if @session.valid?
       session[:user_id] = @session.user_id
@@ -13,7 +15,17 @@ class SessionsController < ApplicationController
   end
 
   def new
+    authorize :session
+
     @session = Session.new
+  end
+
+  def destroy
+    authorize :session
+
+    session.clear
+
+    redirect_to '/'
   end
 
   private

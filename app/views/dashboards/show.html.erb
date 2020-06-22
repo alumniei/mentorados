@@ -1,0 +1,11 @@
+<h2>Students</h2>
+
+<% @students.each do |student| %>
+  <p><%= student.email %></p>
+<% end %>
+
+<h2>Mentors</h2>
+
+<% @mentors.each do |mentor| %>
+  <p><%= mentor.email %></p>
+<% end %>

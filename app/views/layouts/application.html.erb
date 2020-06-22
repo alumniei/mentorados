@@ -10,6 +10,18 @@
   </head>
 
   <body>
+    <header>
+      <h1><%= t 'views.home.index.title' %></h1>
+
+      <%- if current_user %>
+        <nav>
+          <ul>
+            <li><%= link_to t('views.layout.navigation.profile'), "/profile" %></li>
+            <li><%= button_to t('views.layout.navigation.logout'), session_path, method: :delete %></li>
+          </ul>
+        </nav>
+      <% end %>
+    </header>
     <%= yield %>
   </body>
 </html>

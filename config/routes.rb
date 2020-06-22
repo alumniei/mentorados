@@ -5,7 +5,9 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :sessions, only: %i[create new]
+  resource :dashboard, only: %i[show]
+  resources :mentors, only: %i[show]
+  resource :session, only: %i[create new destroy]
 
   root to: 'home#index'
 end
