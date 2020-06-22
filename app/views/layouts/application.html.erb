@@ -16,6 +16,7 @@
       <%- if current_user %>
         <nav>
           <ul>
+            <li><%= link_to t('views.layout.navigation.mentors'), mentors_path %></li>
             <li><%= link_to t('views.layout.navigation.profile'), "/profile" %></li>
             <li><%= button_to t('views.layout.navigation.logout'), session_path, method: :delete %></li>
           </ul>

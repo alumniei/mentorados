@@ -6,8 +6,10 @@ Rails.application.routes.draw do
   end
 
   resource :dashboard, only: %i[show]
-  resources :mentors, only: %i[show]
+  resources :mentors, only: %i[show index]
   resource :session, only: %i[create new destroy]
+
+  resource :profile, only: %i[show update]
 
   root to: 'home#index'
 end

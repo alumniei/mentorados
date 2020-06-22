@@ -5,6 +5,7 @@ class User < ApplicationRecord
   scope :confirmation_pending, -> { where(confirmed_at: nil) }
   scope :mentor, -> { where(mentor: true) }
   scope :student, -> { where(mentor: false) }
+  scope :active, -> { where(active: true) }
 
   validates :email, presence: true, uniqueness: { case_sensitive: false }
   validate :validate_feup_email, on: :create, if: -> { student? }
