@@ -1,0 +1,32 @@
+<%= cache mentor do %>
+  <section class="h-card">
+    <h2 class="p-name"><%= mentor.name %></h2>
+
+    <% if mentor.picture.attachment %>
+      <%= image_tag mentor.picture, class: "u-photo" %>
+    <% end %>
+
+    <div class="urls">
+      <% mentor.urls.each do |url| %>
+        <%= link_to url, url, class: "u-url" %>
+      <% end %>
+    </div>
+
+    <p>
+      Living/working in
+      <span class="p-locality"><%= mentor.location_locality %></span>,
+      <span class="p-country-name"><%= mentor.location_country %></span>.
+    </p>
+
+    <p>
+      Attended from
+      <time datetime="<%= mentor.year_out %>"><%= mentor.year_in %></time>
+      to
+      <time datetime="<%= mentor.year_out %>"><%= mentor.year_out %></time>
+    </p>
+
+    <div class="biography">
+      <%= simple_format mentor.bio %>
+    </div>
+  </section>
+<% end %>

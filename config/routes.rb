@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   resources :mentors, only: %i[show index]
   resource :session, only: %i[create new destroy]
 
-  resource :profile, only: %i[show update]
+  resource :profile, only: %i[edit update]
 
   root to: 'home#index'
 end

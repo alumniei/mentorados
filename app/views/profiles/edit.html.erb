@@ -1,0 +1,52 @@
+
+<%= form_with model: current_user, url: profile_path, class: "edit-profile-form" do |f| %>
+  <div class="field">
+    <%= f.label :active %>
+    <%= f.check_box :active %>
+    <span class="description"><%= t('helpers.description.user.active') %></span>
+  </div>
+
+  <div class="field">
+    <%= f.label :picture %>
+    <%= f.file_field :picture %>
+    <span class="description"><%= t('helpers.description.user.picture') %></span>
+  </div>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <span class="description"><%= t('helpers.description.user.name') %></span>
+  </div>
+
+  <div class="field">
+    <%= f.label :location %>
+    <%= f.text_area :location %>
+    <span class="description"><%= t('helpers.description.user.location') %></span>
+  </div>
+
+  <div class="field">
+    <%= f.label :bio %>
+    <%= f.text_area :bio %>
+    <span class="description"><%= t('helpers.description.user.bio') %></span>
+  </div>
+
+  <div class="field">
+    <%= f.label :year_in %>
+    <%= f.text_field :year_in %>
+    <span class="description"><%= t('helpers.description.user.year_in') %></span>
+  </div>
+
+  <div class="field">
+    <%= f.label :year_out %>
+    <%= f.text_field :year_out %>
+    <span class="description"><%= t('helpers.description.user.year_out') %></span>
+  </div>
+
+  <div class="field">
+    <%= f.label :url_text %>
+    <%= f.text_area :url_text %>
+    <span class="description"><%= t('helpers.description.user.url_text') %></span>
+  </div>
+
+  <%= f.submit %>
+<% end %>

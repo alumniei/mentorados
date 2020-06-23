@@ -13,6 +13,7 @@ class User < ApplicationRecord
   after_create :reload
 
   has_secure_password
+  has_one_attached :picture
 
   def confirmed?
     !confirmed_at.nil?
@@ -26,14 +27,26 @@ class User < ApplicationRecord
     mentor
   end
 
+  def urls
+    url_text&.delete("\r")&.split("\n") || []
+  end
+
   def confirm!
     update(confirmed_at: Time.current)
+  end
+
+  def location_locality
+    location&.split(',')&.first&.strip
+  end
+
+  def location_country
+    location&.split(',')&.second&.strip
   end
 
   private
 
   def validate_feup_email
-    return if email.split('@').last.casecmp('fe.up.pt').zero?
+    return if email&.split('@')&.last&.casecmp('fe.up.pt')&.zero?
 
     errors.add(:email, :feup_address_required)
   end

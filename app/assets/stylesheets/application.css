@@ -13,3 +13,7 @@
  *= require_tree .
  *= require_self
  */
+.h-card .u-photo {
+  max-width: 96px;
+  max-height: 96px;
+}

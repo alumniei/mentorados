@@ -1,6 +1,4 @@
 en:
-  hello: "Hello world"
-
   activerecord:
     errors:
       models:
@@ -10,9 +8,26 @@ en:
               taken: "This email address has already been registered"
               feup_address_required: "You must use an email address ending in @fe.up.pt"
   helpers:
+    description:
+      user:
+        active: We only list active members on the platform. You can mark yourself as inactive if you're on vacations and will be unable to answer, for example.
+        bio: Your biography. Focus career decisions that you might have had questions about when you  were a student.
+        location: Your current location, in "city, country" format.
+        name: Your preferred name
+        url_text: Links to your personal website or social profiles (one per line).
+        year_in: The first year you enrolled in LEIC/MIEIC.
+        year_out: The last year you were enrolled in LEIC/MIEIC.
+    label:
+      user:
+        active: Active
+        bio: Biography
+        location: Location
+        name: Name
+        url_text: Personal URLs
     submit:
       user:
         create: "Register"
+        update: "Update"
 
   registrations_mailer:
     confirmation:
