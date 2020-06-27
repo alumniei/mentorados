@@ -4,6 +4,12 @@
 
     <% if mentor.picture.attachment %>
       <%= image_tag mentor.picture, class: "u-photo" %>
+    <% else %>
+      <%= image_tag(
+        '/assets/default-avatar',
+        class: "u-photo default-picture",
+        style: "object-position: -#{mentor.id.sum % 375}px -#{mentor.id.sum % 65}px",
+      ) %>
     <% end %>
 
     <div class="urls">
