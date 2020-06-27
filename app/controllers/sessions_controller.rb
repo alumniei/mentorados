@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
     if @session.valid?
       session[:user_id] = @session.user_id
 
-      redirect_to '/'
+      redirect_to mentors_path
     else
       render :new, status: :bad_request
     end
