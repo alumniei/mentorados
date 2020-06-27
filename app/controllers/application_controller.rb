@@ -12,9 +12,9 @@ class ApplicationController < ActionController::Base
   private
 
   def current_user
-    return @user if defined?(@user)
+    return @current_user if defined?(@current_user)
 
-    @user = User.find_by(id: session[:user_id])
+    @current_user = User.find_by(id: session[:user_id])
   end
 
   def bad_request
