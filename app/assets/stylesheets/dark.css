@@ -1,0 +1,18 @@
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #272822;
+    color: #b8b8b2;
+  }
+
+  input[type=submit] {
+    border-color: #A9A9A9 #A9A9A9 white #A9A9A9;
+    background-color: #272822;
+    color: #A9A9A9;
+  }
+
+  input[type=text], input[type=number], textarea {
+    border-color: #A9A9A9;
+    background-color: #272822;
+    color: #b8b8b2;
+  }
+}

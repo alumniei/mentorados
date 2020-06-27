@@ -1,0 +1,11 @@
+@media (prefers-color-scheme: light) {
+  input[type=submit] {
+    border-color: black;
+  }
+
+  input[type=text], input[type=number], textarea {
+    border-color: black;
+    background-color: white;
+    color: auto;
+  }
+}

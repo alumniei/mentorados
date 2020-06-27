@@ -13,6 +13,64 @@
  *= require_tree .
  *= require_self
  */
+body {
+  font-family: sans-serif;
+  max-width: 40rem;
+  margin: 0px auto;
+}
+
+input[type=submit] {
+  border: 1px solid;
+  height: 24px;
+}
+
+input[type=radio] {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-top: 0px;
+}
+
+input[type=checkbox] {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-top: 0px;
+}
+
+input[type=file] {
+  border: 0;
+}
+
+input[type=text], input[type=number], textarea {
+  line-height: 20px;
+  border: 1px solid;
+  padding: 2px 6px;
+}
+
+body > header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+
+.edit-profile-form { max-width: calc(36rem + 10px); margin: 0px auto 60px auto; }
+
+.edit-profile-form .label { margin: 20px 0px 0px 0px; font-weight: bold; font-size: 1.2em; }
+.edit-profile-form .input { margin: 5px 0px; }
+.edit-profile-form .description { line-height: 20px; }
+
+.edit-profile-form input[type=text] { width: calc(100% - 4rem); }
+.edit-profile-form input[type=number] { width: calc(100% - 4rem); }
+.edit-profile-form input[type=submit] { margin-top: 10px; }
+.edit-profile-form textarea { width: calc(100% - 4rem); height: 150px; }
+
+.edit-profile-form .picture-img { width: 32px; vertical-align: middle; }
+.edit-profile-form .career-checkbox { margin-bottom: 10px; line-height: 20px; }
+.edit-profile-form .active-radio { margin-bottom: 10px; line-height: 20px; }
+
 .h-card .u-photo {
   max-width: 96px;
   max-height: 96px;
