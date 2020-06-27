@@ -4,6 +4,6 @@ class MentorsController < ApplicationController
   def index
     authorize :mentor
 
-    @mentors = User.mentor.active.shuffle
+    @mentors = User.mentor.active.search(params[:query]).shuffle
   end
 end

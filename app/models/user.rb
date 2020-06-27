@@ -59,6 +59,21 @@ class User < ApplicationRecord
     location&.split(',')&.second&.strip
   end
 
+  def self.search_word(word)
+    %w[name bio location url_text year_in year_out].map do |field|
+      where(["unaccent(#{field}::text) ILIKE CONCAT('%', unaccent(?), '%')", word])
+    end.reduce(&:or)
+  end
+
+  def self.search(query)
+    return all if query.blank?
+
+    sanitize_sql_like(query)
+      .split(/\s/)
+      .map { |word| search_word(word) }
+      .reduce(all, &:merge)
+  end
+
   private
 
   def validate_feup_email
