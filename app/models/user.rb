@@ -1,6 +1,17 @@
 # frozen_string_literal: true
 
 class User < ApplicationRecord
+  CareerPaths = %w[
+    academia
+    entrepeneurship
+    established_company
+    freelance
+    management
+    research
+    scaleup
+    startup
+  ].freeze
+
   scope :confirmed, -> { where.not(confirmed_at: nil) }
   scope :confirmation_pending, -> { where(confirmed_at: nil) }
   scope :mentor, -> { where(mentor: true) }
@@ -11,6 +22,11 @@ class User < ApplicationRecord
   validate :validate_feup_email, on: :create, if: -> { student? }
 
   after_create :reload
+  before_save :clean_empty
+
+  def clean_empty
+    careers.select!(&:present?)
+  end
 
   has_secure_password
   has_one_attached :picture

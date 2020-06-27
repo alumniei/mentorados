@@ -29,6 +29,12 @@
       </div>
     </header>
 
+    <div class="careers">
+      <% mentor.careers.each do |career| %>
+        <span class="career"><%= t "helpers.label.user.career.#{career}" %></span>
+      <% end %>
+    </div>
+
     <div class="urls">
       <% mentor.urls.each do |url| %>
         <%= link_to url, url, class: "u-url" %>

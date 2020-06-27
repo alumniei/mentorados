@@ -22,6 +22,8 @@ en:
       user:
         active: Active
         bio: Biography
+        career:
+          startup: Start-up
         location: Location
         name: Name
         url_text: Personal URLs
