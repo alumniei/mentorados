@@ -6,6 +6,22 @@
 
 <h2>Mentors</h2>
 
-<% @mentors.each do |mentor| %>
+<h3>Pending invitations</h3>
+
+<% @mentors.confirmation_pending.each do |mentor| %>
+  <p><%= mentor.email %></p>
+<% end %>
+
+<h3>Inactive</h3>
+
+<h3>Active</h3>
+
+<% @mentors.confirmed.active.each do |mentor| %>
+  <p><%= mentor.email %></p>
+<% end %>
+
+<h3>Inactive</h3>
+
+<% @mentors.confirmed.inactive.each do |mentor| %>
   <p><%= mentor.email %></p>
 <% end %>
