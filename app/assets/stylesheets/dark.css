@@ -15,4 +15,8 @@
     background-color: #272822;
     color: #b8b8b2;
   }
+
+  a, a:visited {
+    color: #b0cadb;
+  }
 }

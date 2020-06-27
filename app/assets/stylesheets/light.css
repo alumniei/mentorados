@@ -8,4 +8,8 @@
     background-color: white;
     color: auto;
   }
+
+  a, a:visited {
+    color: #0645AD;
+  }
 }
