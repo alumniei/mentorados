@@ -116,3 +116,30 @@ body > header {
   height: 96px;
   object-fit: none;
 }
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  margin: 0px;
+  padding: 0px;
+}
+
+h1 {
+  margin: 0px;
+  line-height: 2em;
+}
+
+nav ul li { margin-right: 10px; }
+nav ul li a, nav ul li input[type=submit] {
+  display: inline-block;
+  padding: 10px 10px;
+}
+
+nav input[type=submit] {
+  font-size: 1rem;
+  background-color: transparent;
+  border: none;
+  text-decoration: underline;
+  height: auto;
+  padding: 0;
+}
