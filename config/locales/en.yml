@@ -36,7 +36,8 @@ en:
   views:
     home:
       index:
-        title: AlumniEI mentorship program
+        title: AlumniEI mentors
+        code_of_conduct: code of conduct
     layout:
       navigation:
         logout: Logout

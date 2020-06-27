@@ -12,6 +12,7 @@ gem 'pg'
 gem 'puma'
 gem 'pundit'
 gem 'rails'
+gem 'redcarpet'
 gem 'sass-rails'
 
 group :development, :test do

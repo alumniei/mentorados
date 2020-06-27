@@ -22,11 +22,13 @@
   institutional email address.
 </p>
 
+<%- unless current_user %>
 <p>
   <%= link_to t('views.home.index.students.register'), new_registration_path %>
   or
   <%= link_to t('views.home.index.students.login'), new_session_path %>
 </p>
+<%- end %>
 
 <h2>Be a mentor</h2>
 
@@ -38,8 +40,8 @@
 <h2>Code of conduct</h2>
 
 <p>
-  To use this platform you must agree to adhere to our code of conduct. Take
-  your time to read it.
+To use this platform you must agree to adhere to our <%= link_to t('views.home.index.code_of_conduct'),
+  code_of_conduct_path %>. Take your time to read it.
 </p>
 
 <h2>Contact us</h2>
