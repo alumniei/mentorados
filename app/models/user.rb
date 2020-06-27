@@ -17,9 +17,12 @@ class User < ApplicationRecord
   scope :mentor, -> { where(mentor: true) }
   scope :student, -> { where(mentor: false) }
   scope :active, -> { where(active: true) }
+  scope :inactive, -> { where(active: false) }
 
   validates :email, presence: true, uniqueness: { case_sensitive: false }
   validate :validate_feup_email, on: :create, if: -> { student? }
+
+  belongs_to :invited_by, class_name: 'User', optional: true
 
   after_create :reload
   before_save :clean_empty

@@ -5,6 +5,12 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :invitations, only: %i[create new show] do
+    member do
+      post :confirm
+    end
+  end
+
   resource :dashboard, only: %i[show]
   resources :mentors, only: %i[show index]
   resource :session, only: %i[create new destroy]

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_26_123040) do
+ActiveRecord::Schema.define(version: 2020_06_26_180354) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
@@ -56,8 +56,13 @@ ActiveRecord::Schema.define(version: 2020_06_26_123040) do
     t.uuid "registration_id", default: -> { "gen_random_uuid()" }, null: false
     t.text "url_text"
     t.text "careers", default: [], null: false, array: true
+    t.uuid "invitation_id"
+    t.uuid "invited_by_id"
+    t.datetime "invited_at"
     t.index "lower((email)::text)", name: "index_users_on_lower_email", unique: true
+    t.index ["invited_by_id"], name: "index_users_on_invited_by_id"
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "users", "users", column: "invited_by_id"
 end

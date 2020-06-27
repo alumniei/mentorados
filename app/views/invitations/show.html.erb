@@ -1,0 +1,22 @@
+<h1>Finish creating your mentor account</h1>
+
+<%= form_with model: @user, url: confirm_invitation_path(@user.invitation_id), method: :post do |f| %>
+  <p><%= t 'views.invitations.show.instructions' %></p>
+
+  <%= f.label :password %>
+  <%= f.password_field :password, required: true %>
+
+  <p>
+    <%= t(
+      'views.invitations.show.consent',
+      code_of_conduct: link_to(t('views.invitations.show.code_of_conduct'), code_of_conduct_path),
+      cookie_policy: link_to(t('views.invitations.show.cookie_policy'), cookies_path),
+      privacy_policy: link_to(t('views.invitations.show.privacy_policy'), privacy_path),
+     ).html_safe %>
+  </p>
+
+  <p><%= t('views.invitations.show.contact', href: mail_to("mentor@alumniei.pt", "mentor@alumniei.pt")).html_safe %></p>
+
+  <%= f.submit %>
+<% end %>
+

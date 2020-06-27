@@ -7,6 +7,8 @@ en:
             email:
               taken: "This email address has already been registered"
               feup_address_required: "You must use an email address ending in @fe.up.pt"
+            password:
+              blank: "Password cannot be blank"
   helpers:
     description:
       user:
@@ -26,6 +28,7 @@ en:
           startup: Start-up
         location: Location
         name: Name
+        password: Password
         url_text: Personal URLs
     submit:
       user:
@@ -37,10 +40,25 @@ en:
       subject: Welcome to mentor.alumniei.pt
 
   views:
+    dashboard:
+      mentors:
+        invite: Invite someone to be a mentor, by email
     home:
       index:
         title: AlumniEI mentors
         code_of_conduct: code of conduct
+    invitations:
+      show:
+        code_of_conduct: code of conduct
+        cookie_policy: cookie policy
+        privacy_policy: privacy policy
+        consent: |
+          By creating an account, you agree to AlumniEI's %{code_of_conduct},
+          %{cookie_policy}, and %{privacy_policy}.
+        contact: 'If you have any questions, send us an email: %{href}.'
+        instructions: |
+          To finish creating your account, we need you to set a password. Then,
+          we'll ask you to fill in your profile and you'll be ready to go.
     layout:
       navigation:
         logout: Logout
