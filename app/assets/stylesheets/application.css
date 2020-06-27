@@ -71,7 +71,48 @@ body > header {
 .edit-profile-form .career-checkbox { margin-bottom: 10px; line-height: 20px; }
 .edit-profile-form .active-radio { margin-bottom: 10px; line-height: 20px; }
 
-.h-card .u-photo {
+.mentor-list-item {
+  margin-bottom: 40px;
+}
+
+.mentor-list-item header {
+  overflow: auto;
+}
+
+.mentor-list-item .p-name     { margin: 0px; line-height: 26px; }
+.mentor-list-item .u-email    { margin: 0px; line-height: 26px; }
+.mentor-list-item .location   { margin: 0px; line-height: 26px; }
+.mentor-list-item .attendance { margin: 0px; line-height: 26px; }
+
+.mentor-list-item .u-url {
+  display: inline-block;
+  padding: 3px 10px;
+  color: black;
+  background-color: #FF9E7C;
+}
+
+.mentor-list-item .career {
+  margin-bottom: 6px;
+  display: inline-block;
+  padding: 3px 10px;
+  color: black;
+  background-color: #46d9be;
+}
+
+
+.mentor-list-item img.u-photo {
+  float: left;
+}
+
+.mentor-list-item img.u-photo {
   max-width: 96px;
   max-height: 96px;
+  border: 4px solid black;
+  margin: 0px 15px 10px 0px;
+}
+
+.mentor-list-item img.u-photo.default-picture {
+  width: 96px;
+  height: 96px;
+  object-fit: none;
 }

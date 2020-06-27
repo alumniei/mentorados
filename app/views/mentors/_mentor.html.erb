@@ -1,35 +1,39 @@
 <%= cache mentor do %>
-  <section class="h-card">
-    <h2 class="p-name"><%= mentor.name %></h2>
+  <section class="h-card mentor-list-item">
+    <header>
+      <% if mentor.picture.attachment %>
+        <%= image_tag mentor.picture, class: "u-photo" %>
+      <% else %>
+        <%= image_tag(
+          '/assets/default-avatar',
+          class: "u-photo default-picture",
+          style: "object-position: -#{mentor.id.sum % 375}px -#{mentor.id.sum % 65}px",
+        ) %>
+      <% end %>
 
-    <% if mentor.picture.attachment %>
-      <%= image_tag mentor.picture, class: "u-photo" %>
-    <% else %>
-      <%= image_tag(
-        '/assets/default-avatar',
-        class: "u-photo default-picture",
-        style: "object-position: -#{mentor.id.sum % 375}px -#{mentor.id.sum % 65}px",
-      ) %>
-    <% end %>
+      <h2 class="p-name"><%= mentor.name %></h2>
+
+      <div class="u-email"><%= mail_to mentor.email, mentor.email %></div>
+
+      <div class="location">
+        Living/working in
+        <span class="p-locality"><%= mentor.location_locality %></span>,
+        <span class="p-country-name"><%= mentor.location_country %></span>.
+      </div>
+
+      <div class="attendance">
+        Attended from
+        <time datetime="<%= mentor.year_out %>"><%= mentor.year_in %></time>
+        to
+        <time datetime="<%= mentor.year_out %>"><%= mentor.year_out %></time>.
+      </div>
+    </header>
 
     <div class="urls">
       <% mentor.urls.each do |url| %>
         <%= link_to url, url, class: "u-url" %>
       <% end %>
     </div>
-
-    <p>
-      Living/working in
-      <span class="p-locality"><%= mentor.location_locality %></span>,
-      <span class="p-country-name"><%= mentor.location_country %></span>.
-    </p>
-
-    <p>
-      Attended from
-      <time datetime="<%= mentor.year_out %>"><%= mentor.year_in %></time>
-      to
-      <time datetime="<%= mentor.year_out %>"><%= mentor.year_out %></time>
-    </p>
 
     <div class="biography">
       <%= simple_format mentor.bio %>
