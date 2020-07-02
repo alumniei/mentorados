@@ -2,6 +2,8 @@
 
 class RegistrationsController < ApplicationController
   def confirm
+    authorize :registration
+
     User.student.confirmation_pending.find_by!(registration_id: params[:id]).confirm!
 
     redirect_to '/'
@@ -10,6 +12,8 @@ class RegistrationsController < ApplicationController
   end
 
   def create
+    authorize :registration
+
     User.transaction do
       @user = User.student.confirmation_pending.create(create_params)
 
@@ -24,10 +28,14 @@ class RegistrationsController < ApplicationController
   end
 
   def new
+    authorize :registration
+
     @user = User.student.confirmation_pending.new
   end
 
   def show
+    authorize :registration
+
     @user = User.student.confirmation_pending.find_by!(registration_id: params[:id])
   rescue ActiveRecord::RecordNotFound
     render :not_found, status: :not_found
