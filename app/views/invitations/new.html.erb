@@ -1,4 +1,4 @@
-<h1>Invite a mentor</h1>
+<h1><%= t 'views.invitations.new.title' %></h1>
 
 <%= form_with model: @invitation, url: invitations_path do |f| %>
   <%- if @invitation.errors.any? %>

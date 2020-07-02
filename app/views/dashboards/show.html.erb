@@ -1,28 +1,26 @@
-<h2>Students</h2>
+<h2><%= t 'views.dashboard.students.title' %></h2>
 
 <% @students.each do |student| %>
   <p><%= student.email %></p>
 <% end %>
 
-<h2>Mentors</h2>
+<h2><%= t 'views.dashboard.mentors.title' %></h2>
 
 <p><%= link_to t('views.dashboard.mentors.invite'), new_invitation_path %></p>
 
-<h3>Pending invitations</h3>
+<h3><%= t 'views.dashboard.mentors.pending.title' %></h3>
 
 <% @mentors.confirmation_pending.each do |mentor| %>
   <p><%= mentor.email %></p>
 <% end %>
 
-<h3>Inactive</h3>
-
-<h3>Active</h3>
+<h3><%= t 'views.dashboard.mentors.active.title' %></h3>
 
 <% @mentors.confirmed.active.each do |mentor| %>
   <p><%= mentor.email %></p>
 <% end %>
 
-<h3>Inactive</h3>
+<h3><%= t 'views.dashboard.mentors.inactive.title' %></h3>
 
 <% @mentors.confirmed.inactive.each do |mentor| %>
   <p><%= mentor.email %></p>

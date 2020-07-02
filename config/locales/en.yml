@@ -43,11 +43,22 @@ en:
     dashboard:
       mentors:
         invite: Invite someone to be a mentor, by email
+        title: Mentors
+        pending:
+          title: Pending invitations
+        active:
+          title: Active
+        inactive:
+          title: Inactive
+      students:
+        title: Students
     home:
       index:
         title: AlumniEI mentors
         code_of_conduct: code of conduct
     invitations:
+      new:
+        title: Invite a mentor
       show:
         code_of_conduct: code of conduct
         cookie_policy: cookie policy
@@ -59,7 +70,33 @@ en:
         instructions: |
           To finish creating your account, we need you to set a password. Then,
           we'll ask you to fill in your profile and you'll be ready to go.
+        title: Finish creating your mentor account
+    mentors:
+      index:
+        attendance: Attended from %{from} to %{to}.
+        location: Living/working in %{locality}, %{country}.
     layout:
       navigation:
         logout: Logout
         profile: Profile
+    registrations:
+      new:
+        restriction: |
+          Registration is limited to MIEIC students. We restrict this
+          by only allowing sign-ups from @fe.up.pt emails. If you lost
+          your access to your institutional email account, contact us
+          so we can help: %{href}.
+        existing_account: |
+          Already have an account?
+        code_of_conduct: code of conduct
+        cookie_policy: cookie policy
+        privacy_policy: privacy policy
+        consent: |
+          By creating an account, you agree to AlumniEI's %{code_of_conduct},
+          %{cookie_policy}, and %{privacy_policy}.
+      show:
+        title: Confirm your student account
+    sessions:
+      new:
+        title: Login
+        no_account: Don't have an account yet?

@@ -1,6 +1,6 @@
-<h1>Login</h1>
+<h1><%= t 'views.sessions.new.title' %></h1>
 
-<%= form_with model: @session, url: session_path do |f| %>
+<%= form_with model: @session, url: session_path, class: "new-session-form" do |f| %>
   <%- if @session.errors.any? %>
     <ul class="sessions-errors">
       <% @session.errors.each do |_, error| %>
@@ -23,5 +23,6 @@
 <% end %>
 
 <p>
-  Don't have an account yet? <%= link_to t('views.sessions.new.register'), new_registration_path %>
+  <%= t 'views.sessions.new.no_account' %>
+  <%= link_to t('views.sessions.new.register'), new_registration_path %>
 </p>

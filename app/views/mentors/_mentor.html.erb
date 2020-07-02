@@ -16,16 +16,19 @@
       <div class="u-email"><%= mail_to mentor.email, mentor.email %></div>
 
       <div class="location">
-        Living/working in
-        <span class="p-locality"><%= mentor.location_locality %></span>,
-        <span class="p-country-name"><%= mentor.location_country %></span>.
+        <%= t(
+          'views.mentors.index.location',
+          locality: "<span class=\"p-locality\">#{mentor.location_locality}</span>",
+          country: "<span class=\"p-country-name\">#{mentor.location_country}</span>",
+        ).html_safe %>
       </div>
 
       <div class="attendance">
-        Attended from
-        <time datetime="<%= mentor.year_out %>"><%= mentor.year_in %></time>
-        to
-        <time datetime="<%= mentor.year_out %>"><%= mentor.year_out %></time>.
+        <%= t(
+          'views.mentors.index.attendance',
+          from: "<time datetime=\"#{mentor.year_in}\">#{mentor.year_in}</time>",
+          to: "<time datetime=\"#{mentor.year_out}\">#{mentor.year_out}</time>",
+        ).html_safe %>
       </div>
     </header>
 

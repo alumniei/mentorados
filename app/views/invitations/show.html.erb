@@ -1,4 +1,4 @@
-<h1>Finish creating your mentor account</h1>
+<h1><%= t 'views.invitations.show.title' %></h1>
 
 <%= form_with model: @user, url: confirm_invitation_path(@user.invitation_id), method: :post do |f| %>
   <p><%= t 'views.invitations.show.instructions' %></p>

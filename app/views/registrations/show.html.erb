@@ -1,4 +1,4 @@
-<h1>Confirm your account</h1>
+<h1><%= t 'views.registrations.show.title' %></h1>
 
 <%= form_with url: confirm_registration_path(@user.registration_id), method: :post do |f| %>
   <%= f.submit %>
