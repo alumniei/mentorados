@@ -17,6 +17,7 @@ body {
   font-family: sans-serif;
   max-width: 40rem;
   margin: 0px auto;
+  padding: 1rem;
 }
 
 input[type=submit] {
@@ -116,6 +117,20 @@ body > header {
   height: 96px;
   object-fit: none;
 }
+
+.new-session-form {
+  margin: 0 auto;
+}
+
+.new-session-form label { display: block; line-height: 20px; }
+.new-session-form input[type=submit] { margin-top: 10px; }
+
+.new-registration-form { max-width: 15rem; margin: 0 auto; }
+.new-registration-form label { display: block; line-height: 20px; }
+.new-registration-form input[type=email] { width: 90%; }
+.new-registration-form input[type=password] { width: 90%; }
+.new-registration-form input[type=submit] { margin-top: 10px; }
+
 
 nav ul {
   list-style-type: none;
