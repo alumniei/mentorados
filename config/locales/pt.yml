@@ -8,19 +8,19 @@ en:
               taken: "Este endereço de email já está registado"
               feup_address_required: "Deves utilizar um endereço de email terminado em @fe.up.pt"
             password:
-              blank: "A palavra passe tem que ser preenchida"
+              blank: "Tens que preencher uma palavra passe"
   helpers:
     description:
       user:
-        active: Só os membros activos são listados na plataforma. Marque-se como inactivo se não quiser ser contactado por estudantes.
-        bio: A sua biografia. Foque-se nas decisões de carreira sobre as quais poderia ter tido questões quando era estudante.
+        active: Só os membros activos são listados na plataforma. Marca-te como inactivo se não quiseres ser contactado por estudantes.
+        bio: A tua biografia. Foca-te nas decisões de carreira sobre as quais poderias ter tido questões quando eras estudante.
         careers: Carreiras
-        location: 'A sua localização actual, no formato "cidade, país". Exemplo: Porto, Portugal.'
-        name: O seu nome preferencial.
-        picture: Uma foto sua, em formato PNG ou JPEG, de preferência quadrada.
-        url_text: Endereço da sua página pessoal ou duas suas redes sociais. Um endereço por linha.
-        year_in: O primeiro ano em que esteve inscrito no curso LEIC/MIEIC.
-        year_out: O último ano em que esteve inscrito no curso LEIC/MIEIC.
+        location: 'A tua localização actual, no formato "cidade, país". Exemplo: Porto, Portugal.'
+        name: O teu nome preferencial.
+        picture: Uma foto tua, em formato PNG ou JPEG, de preferência quadrada.
+        url_text: Endereço da tua página pessoal ou duas tuas redes sociais. Um endereço por linha.
+        year_in: O primeiro ano em que estiveste inscrito no curso LEIC/MIEIC.
+        year_out: O último ano em que estiveste inscrito no curso LEIC/MIEIC.
     label:
       user:
         active: Activo
@@ -44,7 +44,7 @@ en:
   views:
     dashboard:
       mentors:
-        invite: Convide alguém para ser mentor, por email
+        invite: Convida alguém para ser mentor, por email
         title: Mentores
         pending:
           title: Convites pendentes
@@ -69,14 +69,14 @@ en:
         cookie_policy: política de cookies
         privacy_policy: política de privacidade
         consent: |
-          Ao criar uma conta, você está a concordar com a %{code_of_conduct},
+          Ao criares uma conta, estás a concordar com a %{code_of_conduct},
           a %{cookie_policy} e a %{privacy_policy} da AlumniEI.
-        contact: 'Se tiver alguma questão, envie-nos um email: %{href}.'
+        contact: 'Se tiveres alguma questão, envia-nos um email: %{href}.'
         instructions: |
-          Para terminar de criar a sua conta, terá que definir uma palavra passe.
-          Depois desse passo pedimos-lhe que preencha o seu perfil e estará pronto
+          Para terminares de criar a tua conta, terás que definir uma palavra passe.
+          Depois desse passo pedimos-te que preenchas o teu perfil e ficará tudo pronto
           a utilizar.
-        title: Termine de criar a sua conta de mentor
+        title: Termina de criar a tua conta de mentor
     mentors:
       index:
         attendance: Frequentou entre %{from} e %{to}.
@@ -91,22 +91,22 @@ en:
       new:
         restriction: |
           O registo está limitado a estudantes do MIEIC. Esta restrição é
-          aplicada por restringir o registo de contas a endereços de email
-          do domínio @fe.up.pt. Se perdeu o acesso à sua conta de email
-        institucional, contacte-nos para o que possamos ajudar: %{href}.
+          aplicada restringindo o registo de contas a endereços de email
+          do domínio @fe.up.pt. Se perdeste o acesso à tua conta de email
+          institucional, contacta-nos para que te possamos ajudar: %{href}.
         existing_account: |
-          Já possui uma conta?
+          Já possuis uma conta?
         code_of_conduct: código de conduta
         cookie_policy: política de cookies
         privacy_policy: política de privacidade
         consent: |
-          Ao criar uma conta, você está a concordar com a %{code_of_conduct},
+          Ao criares uma conta, estás a concordar com a %{code_of_conduct},
           a %{cookie_policy} e a %{privacy_policy} da AlumniEI.
         login: Entrar
       show:
-        title: Confirme a sua conta de estudante
+        title: Confirma a tua conta de estudante
     sessions:
       new:
         title: Entrar
-        no_account: Ainda não tem uma conta?
+        no_account: Ainda não tens uma conta?
         register: Registar
