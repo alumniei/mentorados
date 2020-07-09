@@ -90,9 +90,8 @@ en:
     registrations:
       new:
         restriction: |
-          O registo está limitado a estudantes do MIEIC. Esta restrição é
-          aplicada restringindo o registo de contas a endereços de email
-          do domínio @fe.up.pt. Se perdeste o acesso à tua conta de email
+          O registo está limitado a estudantes do MIEIC com uma conta de email
+          no domínio @fe.up.pt. Se perdeste o acesso à tua conta de email
           institucional, contacta-nos para que te possamos ajudar: %{href}.
         existing_account: |
           Já possuis uma conta?
