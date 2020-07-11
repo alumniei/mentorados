@@ -8,7 +8,7 @@ en:
               taken: "Este endereço de email já está registado"
               feup_address_required: "Deves utilizar um endereço de email terminado em @fe.up.pt"
             password:
-              blank: "Tens que preencher uma palavra passe"
+              blank: "Tens de preencher uma palavra passe"
   helpers:
     description:
       user:
@@ -94,7 +94,7 @@ en:
           no domínio @fe.up.pt. Se perdeste o acesso à tua conta de email
           institucional, contacta-nos para que te possamos ajudar: %{href}.
         existing_account: |
-          Já possuis uma conta?
+          Já tens uma conta?
         code_of_conduct: código de conduta
         cookie_policy: política de cookies
         privacy_policy: política de privacidade
