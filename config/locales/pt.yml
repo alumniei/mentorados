@@ -18,7 +18,7 @@ en:
         location: 'A tua localização actual, no formato "cidade, país". Exemplo: Porto, Portugal.'
         name: O teu nome preferencial.
         picture: Uma foto tua, em formato PNG ou JPEG, de preferência quadrada.
-        url_text: Endereço da tua página pessoal ou duas tuas redes sociais. Um endereço por linha.
+        url_text: Endereço da tua página pessoal ou das tuas redes sociais. Um endereço por linha.
         year_in: O primeiro ano em que estiveste inscrito no curso LEIC/MIEIC.
         year_out: O último ano em que estiveste inscrito no curso LEIC/MIEIC.
     label:
