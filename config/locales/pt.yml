@@ -1,0 +1,111 @@
+en:
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              taken: "Este endereço de email já está registado"
+              feup_address_required: "Deves utilizar um endereço de email terminado em @fe.up.pt"
+            password:
+              blank: "Tens de preencher uma palavra passe"
+  helpers:
+    description:
+      user:
+        active: Só os membros activos são listados na plataforma. Marca-te como inactivo se não quiseres ser contactado por estudantes.
+        bio: A tua biografia. Foca-te nas decisões de carreira sobre as quais poderias ter tido questões quando eras estudante.
+        careers: Carreiras
+        location: 'A tua localização actual, no formato "cidade, país". Exemplo: Porto, Portugal.'
+        name: O teu nome preferencial.
+        picture: Uma foto tua, em formato PNG ou JPEG, de preferência quadrada.
+        url_text: Endereço da tua página pessoal ou das tuas redes sociais. Um endereço por linha.
+        year_in: O primeiro ano em que estiveste inscrito no curso LEIC/MIEIC.
+        year_out: O último ano em que estiveste inscrito no curso LEIC/MIEIC.
+    label:
+      user:
+        active: Activo
+        bio: Biografia
+        career:
+          startup: Start-up
+        careers: Carreiras
+        location: Localização
+        name: Nome
+        password: Palavra passe
+        url_text: Endereços pessoais
+    submit:
+      user:
+        create: "Registar"
+        update: "Actualizar"
+
+  registrations_mailer:
+    confirmation:
+      subject: Bem-vindo a mentor.alumniei.pt
+
+  views:
+    dashboard:
+      mentors:
+        invite: Convida alguém para ser mentor, por email
+        title: Mentores
+        pending:
+          title: Convites pendentes
+        active:
+          title: Activo
+        inactive:
+          title: Inactivo
+      students:
+        title: Estudantes
+    home:
+      index:
+        title: Mentores AlumniEI
+        code_of_conduct: Código de conduta
+        students:
+          login: Entrar
+          register: Registar
+    invitations:
+      new:
+        title: Convidar mentor
+      show:
+        code_of_conduct: código de conduta
+        cookie_policy: política de cookies
+        privacy_policy: política de privacidade
+        consent: |
+          Ao criares uma conta, estás a concordar com a %{code_of_conduct},
+          a %{cookie_policy} e a %{privacy_policy} da AlumniEI.
+        contact: 'Se tiveres alguma questão, envia-nos um email: %{href}.'
+        instructions: |
+          Para terminares de criar a tua conta, terás que definir uma palavra passe.
+          Depois desse passo pedimos-te que preenchas o teu perfil e ficará tudo pronto
+          a utilizar.
+        title: Termina de criar a tua conta de mentor
+    mentors:
+      index:
+        attendance: Frequentou entre %{from} e %{to}.
+        location: A viver/trabalhar em %{locality}, %{country}.
+    layout:
+      navigation:
+        dashboard: Painel de Controlo
+        logout: Terminar sessão
+        mentors: Mentores
+        profile: Perfil
+    registrations:
+      new:
+        restriction: |
+          O registo está limitado a estudantes do MIEIC com uma conta de email
+          no domínio @fe.up.pt. Se perdeste o acesso à tua conta de email
+          institucional, contacta-nos para que te possamos ajudar: %{href}.
+        existing_account: |
+          Já tens uma conta?
+        code_of_conduct: código de conduta
+        cookie_policy: política de cookies
+        privacy_policy: política de privacidade
+        consent: |
+          Ao criares uma conta, estás a concordar com a %{code_of_conduct},
+          a %{cookie_policy} e a %{privacy_policy} da AlumniEI.
+        login: Entrar
+      show:
+        title: Confirma a tua conta de estudante
+    sessions:
+      new:
+        title: Entrar
+        no_account: Ainda não tens uma conta?
+        register: Registar

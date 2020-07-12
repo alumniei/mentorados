@@ -13,7 +13,7 @@ en:
     description:
       user:
         active: We only list active members on the platform. Mark yourself as inactive if you don't want to be contacted by students.
-        bio: Your biography. Focus career decisions that you might have had questions about when you  were a student.
+        bio: Your biography. Focus career decisions that you might have had questions about when you were a student.
         careers: Careers
         location: 'Your current location, in "city, country" format. Example: Porto, Portugal.'
         name: Your preferred name.
