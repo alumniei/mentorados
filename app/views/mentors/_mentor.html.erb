@@ -2,7 +2,7 @@
   <section class="h-card mentor-list-item">
     <header>
       <% if mentor.picture.attachment %>
-        <%= image_tag mentor.picture, class: "u-photo" %>
+        <%= image_tag mentor.picture.variant(resize_to_limit: [384, 384]), class: "u-photo" %>
       <% else %>
         <%= image_tag(
           '/assets/default-avatar',

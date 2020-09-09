@@ -8,6 +8,7 @@ ruby '2.7.1'
 gem 'aws-sdk-rails'
 gem 'bcrypt'
 gem 'bootsnap', require: false
+gem 'image_processing'
 gem 'pg'
 gem 'puma'
 gem 'pundit'
