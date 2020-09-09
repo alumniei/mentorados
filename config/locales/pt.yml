@@ -17,6 +17,7 @@ en:
         careers: Carreiras
         location: 'A tua localização actual, no formato "cidade, país". Exemplo: Porto, Portugal.'
         name: O teu nome preferencial.
+        email: O teu endereço de email, usado para entrar na plataforma e mostrado a estudantes que te queiram contactar.
         picture: Uma foto tua, em formato PNG ou JPEG, de preferência quadrada.
         url_text: Endereço da tua página pessoal ou das tuas redes sociais. Um endereço por linha.
         year_in: O primeiro ano em que estiveste inscrito no curso LEIC/MIEIC.
@@ -30,6 +31,7 @@ en:
         careers: Carreiras
         location: Localização
         name: Nome
+        email: Endereço de email
         password: Palavra passe
         url_text: Endereços pessoais
     submit:

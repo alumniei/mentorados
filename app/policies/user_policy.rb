@@ -13,6 +13,7 @@ UserPolicy = Struct.new(:current_user, :record) do
     [
       :active,
       :bio,
+      :email,
       :location,
       :name,
       :picture,

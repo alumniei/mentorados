@@ -30,6 +30,12 @@
   </div>
 
   <div class="field">
+    <div class="label"><%= f.label :email %></div>
+    <div class="input"><%= f.text_field :email %></div>
+    <div class="description"><%= t('helpers.description.user.email') %></div>
+  </div>
+
+  <div class="field">
     <div class="label"><%= f.label :location %></div>
     <div class="input"><%= f.text_field :location %></div>
     <div class="description"><%= t('helpers.description.user.location') %></div>

@@ -17,6 +17,7 @@ en:
         careers: Careers
         location: 'Your current location, in "city, country" format. Example: Porto, Portugal.'
         name: Your preferred name.
+        email: Your email address, used for logging in and for students to contact you.
         picture: A photo of you, in PNG or JPEG, preferably square.
         url_text: Links to your personal website or social profiles. One URL per line.
         year_in: The first year you enrolled in LEIC/MIEIC.
@@ -30,6 +31,7 @@ en:
         careers: Careers
         location: Location
         name: Name
+        email: Email address
         password: Password
         url_text: Personal URLs
     submit:
