@@ -1,6 +1,7 @@
 <%= form_with model: current_user, url: profile_path, class: "edit-profile-form" do |f| %>
   <div class="field">
     <div class="label"><%= f.label :active %></div>
+    <div class="description"><%= t('helpers.description.user.active') %></div>
     <div class="input">
       <%= f.collection_radio_buttons(:active, { true => :active, false => :inactive }, :first, :last) do |b| %>
         <div class="active-radio">
@@ -9,46 +10,46 @@
         </div>
       <% end %>
     </div>
-    <div class="description"><%= t('helpers.description.user.active') %></div>
   </div>
 
   <div class="field">
     <div class="label"><%= f.label :picture %></div>
+    <div class="description"><%= t('helpers.description.user.picture') %></div>
     <div class="input">
       <% if current_user.picture.attachment %>
         <%= image_tag current_user.picture, class: "picture-img" %>
       <% end %>
       <%= f.file_field :picture %>
     </div>
-    <div class="description"><%= t('helpers.description.user.picture') %></div>
   </div>
 
   <div class="field">
     <div class="label"><%= f.label :name %></div>
-    <div class="input"><%= f.text_field :name %></div>
     <div class="description"><%= t('helpers.description.user.name') %></div>
+    <div class="input"><%= f.text_field :name %></div>
   </div>
 
   <div class="field">
     <div class="label"><%= f.label :email %></div>
-    <div class="input"><%= f.text_field :email %></div>
     <div class="description"><%= t('helpers.description.user.email') %></div>
+    <div class="input"><%= f.text_field :email %></div>
   </div>
 
   <div class="field">
     <div class="label"><%= f.label :location %></div>
-    <div class="input"><%= f.text_field :location %></div>
     <div class="description"><%= t('helpers.description.user.location') %></div>
+    <div class="input"><%= f.text_field :location %></div>
   </div>
 
   <div class="field">
     <div class="label"><%= f.label :bio %></div>
-    <div class="input"><%= f.text_area :bio %></div>
     <div class="description"><%= t('helpers.description.user.bio') %></div>
+    <div class="input"><%= f.text_area :bio %></div>
   </div>
 
   <div class="field">
     <div class="label"><%= t 'helpers.label.user.tags' %></div>
+    <div class="description"><%= t('helpers.description.user.tags') %></div>
     <div class="input">
       <%= f.collection_check_boxes(:tag_ids, Tag.all, :id, :localized_name) do |b| %>
         <div class="tag-checkbox">
@@ -57,25 +58,24 @@
         </div>
       <% end %>
     </div>
-    <div class="description"><%= t('helpers.description.user.tags') %></div>
   </div>
 
   <div class="field">
     <div class="label"><%= f.label :year_in %></div>
-    <div class="input"><%= f.number_field :year_in %></div>
     <div class="description"><%= t('helpers.description.user.year_in') %></div>
+    <div class="input"><%= f.number_field :year_in %></div>
   </div>
 
   <div class="field">
     <div class="label"><%= f.label :year_out %></div>
-    <div class="input"><%= f.number_field :year_out %></div>
     <div class="description"><%= t('helpers.description.user.year_out') %></div>
+    <div class="input"><%= f.number_field :year_out %></div>
   </div>
 
   <div class="field">
     <div class="label"><%= f.label :url_text %></div>
-    <div class="input"><%= f.text_area :url_text %></div>
     <div class="description"><%= t('helpers.description.user.url_text') %></div>
+    <div class="input"><%= f.text_area :url_text %></div>
   </div>
 
   <%= f.submit %>
