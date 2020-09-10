@@ -14,7 +14,7 @@ en:
       user:
         active: We only list active members on the platform. Mark yourself as inactive if you don't want to be contacted by students.
         bio: Your biography. Focus career decisions that you might have had questions about when you were a student.
-        careers: Careers
+        tags: Tags that describe the experiences that you have gone through. Select all that apply or have applied in the past.
         location: 'Your current location, in "city, country" format. Example: Porto, Portugal.'
         name: Your preferred name.
         email: Your email address, used for logging in and for students to contact you.
@@ -26,9 +26,7 @@ en:
       user:
         active: Active
         bio: Biography
-        career:
-          startup: Start-up
-        careers: Careers
+        tags: Tags
         location: Location
         name: Name
         email: Email address

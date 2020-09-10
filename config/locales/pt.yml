@@ -14,7 +14,7 @@ en:
       user:
         active: Só os membros activos são listados na plataforma. Marca-te como inactivo se não quiseres ser contactado por estudantes.
         bio: A tua biografia. Foca-te nas decisões de carreira sobre as quais poderias ter tido questões quando eras estudante.
-        careers: Carreiras
+        tags: Etiquetas que se apliquem às experiências que viveste. Selecciona todas as que são ou já foram relevantes.
         location: 'A tua localização actual, no formato "cidade, país". Exemplo: Porto, Portugal.'
         name: O teu nome preferencial.
         email: O teu endereço de email, usado para entrar na plataforma e mostrado a estudantes que te queiram contactar.
@@ -26,9 +26,7 @@ en:
       user:
         active: Activo
         bio: Biografia
-        career:
-          startup: Start-up
-        careers: Carreiras
+        tags: Etiquetas
         location: Localização
         name: Nome
         email: Endereço de email

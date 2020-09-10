@@ -69,7 +69,7 @@ body > header {
 .edit-profile-form textarea { width: calc(100% - 4rem); height: 150px; }
 
 .edit-profile-form .picture-img { width: 32px; vertical-align: middle; }
-.edit-profile-form .career-checkbox { margin-bottom: 10px; line-height: 20px; }
+.edit-profile-form .tag-checkbox { margin-bottom: 10px; line-height: 20px; }
 .edit-profile-form .active-radio { margin-bottom: 10px; line-height: 20px; }
 
 .mentor-list-item {
@@ -86,20 +86,20 @@ body > header {
 .mentor-list-item .attendance { margin: 0px; line-height: 26px; }
 
 .mentor-list-item .u-url {
+  margin-bottom: 6px;
   display: inline-block;
   padding: 3px 10px;
   color: black;
   background-color: #FF9E7C;
 }
 
-.mentor-list-item .career {
+.mentor-list-item .tag {
   margin-bottom: 6px;
   display: inline-block;
   padding: 3px 10px;
   color: black;
   background-color: #46d9be;
 }
-
 
 .mentor-list-item img.u-photo {
   float: left;

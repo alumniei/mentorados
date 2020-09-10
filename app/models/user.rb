@@ -1,17 +1,6 @@
 # frozen_string_literal: true
 
 class User < ApplicationRecord
-  CareerPaths = %w[
-    academia
-    entrepeneurship
-    established_company
-    freelance
-    management
-    research
-    scaleup
-    startup
-  ].freeze
-
   scope :confirmed, -> { where.not(confirmed_at: nil) }
   scope :confirmation_pending, -> { where(confirmed_at: nil) }
   scope :mentor, -> { where(mentor: true) }
@@ -23,13 +12,10 @@ class User < ApplicationRecord
   validate :validate_feup_email, on: :create, if: -> { student? }
 
   belongs_to :invited_by, class_name: 'User', optional: true
+  has_many :user_tags
+  has_many :tags, through: :user_tags
 
   after_create :reload
-  before_save :clean_empty
-
-  def clean_empty
-    careers.select!(&:present?)
-  end
 
   has_secure_password
   has_one_attached :picture
@@ -63,9 +49,9 @@ class User < ApplicationRecord
   end
 
   def self.search_word(word)
-    %w[name bio location url_text year_in year_out].map do |field|
+    %w[users.name bio location url_text year_in year_out tags.name->>'pt' tags.name->>'en'].map do |field|
       where(["unaccent(#{field}::text) ILIKE CONCAT('%', unaccent(?), '%')", word])
-    end.reduce(&:or)
+    end.reduce(&:or).joins(:tags).distinct
   end
 
   def self.search(query)

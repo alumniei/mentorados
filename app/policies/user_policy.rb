@@ -20,7 +20,7 @@ UserPolicy = Struct.new(:current_user, :record) do
       :url_text,
       :year_in,
       :year_out,
-      careers: [],
+      tag_ids: [],
     ]
   end
 end

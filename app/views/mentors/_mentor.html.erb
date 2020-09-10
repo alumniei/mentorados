@@ -32,9 +32,9 @@
       </div>
     </header>
 
-    <div class="careers">
-      <% mentor.careers.each do |career| %>
-        <span class="career"><%= t "helpers.label.user.career.#{career}" %></span>
+    <div class="tags">
+      <% mentor.tags.each do |tag| %>
+        <span class="tag"><%= tag.localized_name %></span>
       <% end %>
     </div>
 

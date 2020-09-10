@@ -48,18 +48,17 @@
   </div>
 
   <div class="field">
-    <div class="label"><%= t 'helpers.label.user.careers' %></div>
+    <div class="label"><%= t 'helpers.label.user.tags' %></div>
     <div class="input">
-      <%= f.collection_check_boxes(:careers, User::CareerPaths, :itself, :itself) do |b| %>
-        <div class="career-checkbox">
+      <%= f.collection_check_boxes(:tag_ids, Tag.all, :id, :localized_name) do |b| %>
+        <div class="tag-checkbox">
           <%= b.check_box %>
           <%= b.label %>
         </div>
       <% end %>
     </div>
-    <div class="description"><%= t('helpers.description.user.careers') %></div>
+    <div class="description"><%= t('helpers.description.user.tags') %></div>
   </div>
-
 
   <div class="field">
     <div class="label"><%= f.label :year_in %></div>
