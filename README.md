@@ -1,24 +1,43 @@
-# README
+# Mentorados
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+MIEIC students facing difficult career decisions, personal or academic problems
+at university or any other issues, can benefit from speaking to someone who has
+walked a similar path before.
 
-Things you may want to cover:
+This platform was built to connect current MIEIC students looking for
+advice/mentorship, with MIEIC alumni who volunteer their time to lend a
+sympathetic ear and advise wherever they can.
 
-* Ruby version
+## Development
 
-* System dependencies
+To run this application, you need to have ruby 2.7.1 and a recent version
+(>=10) of postgresql installed.
 
-* Configuration
+After cloning this repository, run the following command to install
+dependencies:
 
-* Database creation
+```
+bundle install
+```
 
-* Database initialization
+Create an environment file `.env.development.local` with the something like
+following:
 
-* How to run the test suite
+```
+DATABASE_URL=postgres://localhost/mentorados_development
+BASE_URL=http://localhost:3000
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+Setup the database:
 
-* Deployment instructions
+```
+bin/rails db:create db:migrate
+```
 
-* ...
+Finally, start the rails server:
+
+```
+bin/rails server
+```
+
+The website should be available in `http://localhost:3000`.
