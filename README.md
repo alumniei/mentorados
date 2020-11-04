@@ -41,3 +41,7 @@ bin/rails server
 ```
 
 The website should be available in `http://localhost:3000`.
+
+## Contributing
+
+Check the `CONTRIBUTING.md` files for some rough guidelines.
