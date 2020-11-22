@@ -22,6 +22,9 @@ en:
         url_text: Links to your personal website or social profiles. One URL per line.
         year_in: The first year you enrolled in LEIC/MIEIC.
         year_out: The last year you were enrolled in LEIC/MIEIC.
+      settings:
+        theme: Changes the theme of the website to either the 'dark', 'light' or 'system' themes
+        language: Changes the language of the website
     label:
       user:
         active: Active
@@ -32,6 +35,9 @@ en:
         email: Email address
         password: Password
         url_text: Personal URLs
+      settings:
+        theme: Theme
+        language: Language
     submit:
       user:
         create: "Register"

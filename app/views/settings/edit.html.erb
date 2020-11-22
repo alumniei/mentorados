@@ -1,0 +1,20 @@
+<%= form_with url: settings_path, method: 'put' do %>
+  <div class="field">
+    <div class="label"><%= label_tag(:theme, t('helpers.label.settings.theme')) %></div>
+    <div class="description"><%= t('helpers.description.settings.theme') %></div>
+    <div class="input">
+        <%= select_tag :theme, options_for_select([['system', 'system'], ['light', 'light'], ['dark', 'dark']], @settings.theme) %>
+    </div>
+  </div>
+
+  <div class="field">
+    <div class="label"><%= label_tag(:language, t('helpers.label.settings.language')) %></div>
+    <div class="description"><%= t('helpers.description.settings.language') %></div>
+    <div class="input">
+        <%= select_tag :language, options_for_select([['English', 'en'], ['Português', 'pt']], @settings.language) %>
+    </div>
+  </div>
+
+  <%= submit_tag('Submit') %>
+
+<% end %>
