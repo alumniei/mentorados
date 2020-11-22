@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   resource :session, only: %i[create new destroy]
 
   resource :profile, only: %i[edit update]
+  resource :settings, only: %i[edit update]
 
   get :code_of_conduct, to: 'home#code_of_conduct'
   get :privacy, to: 'home#privacy'
