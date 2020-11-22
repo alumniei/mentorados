@@ -2,7 +2,10 @@
 
 class ApplicationController < ActionController::Base
   include Pundit
+
   after_action :verify_authorized
+  around_action :switch_locale
+ 
   rescue_from Pundit::NotAuthorizedError, with: :unauthorized
 
   rescue_from ActionController::ParameterMissing, with: :bad_request
@@ -23,5 +26,12 @@ class ApplicationController < ActionController::Base
 
   def unauthorized
     head :unauthorized
+  end
+
+  def switch_locale(&action)
+    settings = SettingsHelper::Settings.new(cookies)
+    locale = settings.language || I18n.default_locale
+
+    I18n.with_locale(locale, &action)
   end
 end
