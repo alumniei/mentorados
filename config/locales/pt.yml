@@ -24,7 +24,7 @@ en:
         year_out: O último ano em que estiveste inscrito no curso LEIC/MIEIC.
       settings:
         theme: Altera o tema da página entre as opções 'light', 'dark' e 'system'
-        language: Altera a língua da página
+        locale: Altera a língua da página
     label:
       user:
         active: Activo
@@ -37,7 +37,7 @@ en:
         url_text: Endereços pessoais
       settings:
         theme: Tema
-        language: Língua
+        locale: Língua
     submit:
       user:
         create: "Registar"

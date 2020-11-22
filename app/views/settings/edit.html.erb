@@ -8,10 +8,10 @@
   </div>
 
   <div class="field">
-    <div class="label"><%= label_tag(:language, t('helpers.label.settings.language')) %></div>
-    <div class="description"><%= t('helpers.description.settings.language') %></div>
+    <div class="label"><%= label_tag(:locale, t('helpers.label.settings.locale')) %></div>
+    <div class="description"><%= t('helpers.description.settings.locale') %></div>
     <div class="input">
-        <%= select_tag :language, options_for_select([['English', 'en'], ['Português', 'pt']], @settings.language) %>
+        <%= select_tag :locale, options_for_select([['English', 'en'], ['Português', 'pt']], @settings.locale) %>
     </div>
   </div>
 

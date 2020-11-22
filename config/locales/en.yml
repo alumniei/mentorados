@@ -24,7 +24,7 @@ en:
         year_out: The last year you were enrolled in LEIC/MIEIC.
       settings:
         theme: Changes the theme of the website to either the 'dark', 'light' or 'system' themes
-        language: Changes the language of the website
+        locale: Changes the language of the website
     label:
       user:
         active: Active
@@ -37,7 +37,7 @@ en:
         url_text: Personal URLs
       settings:
         theme: Theme
-        language: Language
+        locale: Language
     submit:
       user:
         create: "Register"

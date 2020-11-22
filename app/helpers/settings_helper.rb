@@ -10,15 +10,15 @@ module SettingsHelper
 
     def save(params)
       self.theme = params[:theme]
-      self.language = params[:language]
+      self.locale = params[:locale]
     end
 
     def theme
       cookies[:_mentorados_theme]
     end
 
-    def language
-      cookies[:_mentorados_language]&.to_sym
+    def locale
+      cookies[:_mentorados_locale]&.to_sym
     end
 
     private
@@ -27,8 +27,8 @@ module SettingsHelper
       set_cookie(:_mentorados_theme, theme)
     end
 
-    def language=(language)
-      set_cookie(:_mentorados_language, language)
+    def locale=(locale)
+      set_cookie(:_mentorados_locale, locale)
     end
 
     def set_cookie(name, value)
