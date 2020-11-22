@@ -92,6 +92,7 @@ en:
         logout: Logout
         mentors: Mentors
         profile: Profile
+        settings: Settings
     registrations:
       new:
         restriction: |

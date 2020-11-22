@@ -93,6 +93,7 @@ pt:
         logout: Terminar sessão
         mentors: Mentores
         profile: Perfil
+        settings: Definições
     registrations:
       new:
         restriction: |
