@@ -43,7 +43,7 @@ input[type=file] {
   border: 0;
 }
 
-input[type=text], input[type=number], textarea {
+input[type=email], input[type=password], input[type=text], input[type=number], textarea {
   line-height: 20px;
   border: 1px solid;
   padding: 2px 6px;
@@ -54,6 +54,26 @@ body > header {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+}
+
+input[type=submit] {
+  background-color: var(--bgcolor);
+  color: var(--fgcolor);
+}
+
+input[type=email], input[type=password], input[type=text], input[type=number], textarea {
+  border-color: var(--fgcolor);
+  background-color: var(--bgcolor);
+  color: var(--fgcolor);
+}
+
+body {
+  background-color: var(--bgcolor);
+  color: var(--fgcolor);
+}
+
+a, a:visited {
+  color: var(--linkcolor);
 }
 
 

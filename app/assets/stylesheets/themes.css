@@ -1,0 +1,35 @@
+.theme--dark {
+  --dark: initial;
+  --light: ;
+}
+
+.theme--light {
+  --dark: ;
+  --light: initial;
+}
+
+.theme--system {
+  --dark: ;
+  --light: initial;
+}
+
+
+@media (prefers-color-scheme: light) {
+  .theme--system {
+    --dark: ;
+    --light: initial;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .theme--system {
+    --dark: initial;
+    --light: ;
+  }
+}
+
+:root {
+  --bgcolor: var(--light, white) var(--dark, #272822);
+  --fgcolor: var(--light, black) var(--dark, #c8c8c2);
+  --linkcolor: var(--light, #0645AD) var(--dark, #b0cadb);
+}

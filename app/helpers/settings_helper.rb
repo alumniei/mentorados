@@ -14,7 +14,7 @@ module SettingsHelper
     end
 
     def theme
-      cookies[:_mentorados_theme]
+      cookies[:_mentorados_theme] || 'system'
     end
 
     def locale
@@ -32,7 +32,7 @@ module SettingsHelper
     end
 
     def set_cookie(name, value)
-      cookies[name] = {value: value, expires: 1.year.from_now}
+      cookies[name] = { value: value, expires: 1.year.from_now }
     end
   end
 end
