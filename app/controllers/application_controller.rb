@@ -29,14 +29,17 @@ class ApplicationController < ActionController::Base
     head :unauthorized
   end
 
+  def settings
+    return @settings if defined?(@settings)
+
+    @settings = SettingsHelper::Settings.new(cookies, request.env['HTTP_ACCEPT_LANGUAGE'])
+  end
+
   def theme
-    SettingsHelper::Settings.new(cookies).theme
+    settings.theme
   end
 
   def switch_locale(&action)
-    settings = SettingsHelper::Settings.new(cookies)
-    locale = settings.locale || I18n.default_locale
-
-    I18n.with_locale(locale, &action)
+    I18n.with_locale(settings.locale, &action)
   end
 end

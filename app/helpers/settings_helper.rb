@@ -2,10 +2,11 @@
 
 module SettingsHelper
   class Settings
-    attr_accessor :cookies
+    attr_accessor :cookies, :accept_language
 
-    def initialize(cookies)
+    def initialize(cookies, accept_language)
       @cookies = cookies
+      @accept_language = accept_language
     end
 
     def save(params)
@@ -18,7 +19,7 @@ module SettingsHelper
     end
 
     def locale
-      cookies[:_mentorados_locale]&.to_sym
+      cookies[:_mentorados_locale]&.to_sym || default_locale
     end
 
     private
@@ -33,6 +34,18 @@ module SettingsHelper
 
     def set_cookie(name, value)
       cookies[name] = { value: value, expires: 1.year.from_now }
+    end
+
+    def default_locale
+      accepted = accept_language
+        .split(',')
+        .map { |language| "#{language.strip};q=1".split(';') }
+        .map { |(locale, q)| [locale.strip, q.split('=')[1].to_i] }
+
+      %w[pt en]
+        .map { |locale| [locale, accepted.select { |(loc, _)| loc.start_with?(locale) }.map { |(_, q)| q }.max || 0] }
+        .max_by(&:last)
+        .first
     end
   end
 end
