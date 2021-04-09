@@ -1,4 +1,4 @@
-en:
+pt:
   activerecord:
     errors:
       models:
@@ -22,6 +22,9 @@ en:
         url_text: Endereço da tua página pessoal ou das tuas redes sociais. Um endereço por linha.
         year_in: O primeiro ano em que estiveste inscrito no curso LEIC/MIEIC.
         year_out: O último ano em que estiveste inscrito no curso LEIC/MIEIC.
+      settings:
+        theme: Altera o tema da página entre as opções 'light', 'dark' e 'system'
+        locale: Altera a língua da página
     label:
       user:
         active: Activo
@@ -32,6 +35,9 @@ en:
         email: Endereço de email
         password: Palavra passe
         url_text: Endereços pessoais
+      settings:
+        theme: Tema
+        locale: Língua
     submit:
       user:
         create: "Registar"
@@ -87,6 +93,7 @@ en:
         logout: Terminar sessão
         mentors: Mentores
         profile: Perfil
+        settings: Definições
     registrations:
       new:
         restriction: |

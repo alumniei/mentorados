@@ -13,7 +13,7 @@ class HomeController < ApplicationController
     skip_authorization
   end
 
-  def cookies
+  def cookie_policy
     skip_authorization
   end
 end
