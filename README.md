@@ -28,6 +28,8 @@ DATABASE_URL=postgres://localhost/mentorados_development
 BASE_URL=http://localhost:3000
 ```
 
+(Tip, you can also use `postgres://<user>:<password>@localhost/mentorados_development` to specify a Postgres user and password.)
+
 Setup the database:
 
 ```

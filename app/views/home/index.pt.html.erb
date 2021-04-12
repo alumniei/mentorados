@@ -1,0 +1,43 @@
+<p>
+  Estudantes do MIEIC que estejam com dificuldade em decisões de carreira, que tenham problemas pessoais/profissionais na universidade, ou com quaisquer outros problemas, podem beneficiar de falar com alguém que já tenha tido uma experiência semelhante.
+</p>
+
+<p>
+  Esta plataforma foi construída para juntar estudantes do MIEIC que estejam à procura de conselhos a almuni do MIEIC que voluntariam o seu tempo para ouvir e aconselhar quando podem.
+</p>
+
+<h2>Encontra um mentor</h2>
+
+<p>
+  Terás acesso às informações de contacto de vários mentores, assim como um resumo das suas expierências e áreas de especialidade.
+</p>
+
+<p>
+  Nós não te iremos pedir nenhuma informação acerca de ti, a não ser o teu endereço de email institucional.
+</p>
+
+<%- unless current_user %>
+<p>
+  <%= link_to t('views.home.index.students.register'), new_registration_path %>
+  ou
+  <%= link_to t('views.home.index.students.login'), new_session_path %>
+</p>
+<%- end %>
+
+<h2>Torna-te um mentor</h2>
+
+<p>
+  Se és um alumnus do MIEIC, gostaríamos de te ter a aconselhar estudantes. Manda-nos um email: <a href='mailto:mentor@alumniei.pt'>mentor@alumniei.pt</a>.
+</p>
+
+<h2>Código de conduta</h2>
+
+<p>
+  Para usar esta plataforma, terás de aderir ao nosso <%= link_to t('views.home.index.code_of_conduct'),code_of_conduct_path %>. Demora o teu tempo a lê-lo.
+</p>
+
+<h2>Contacta-nos</h2>
+
+<p>
+  Se desejas contactar as pessoas responsáveis pela manutenção de plataforma, com sugestões, queixas, ou quaisquer outras questões, envia-nos um email para:  <a href='mailto:mentor@alumniei.pt'>mentor@alumniei.pt</a>.
+</p>
