@@ -7,7 +7,7 @@ module MarkdownHandler
     @erb ||= ActionView::Template.registered_template_handler(:erb)
   end
 
-  def self.call(template)
+  def self.call(template, source)
     options = {
       fenced_code_blocks:           true,
       smartypants:                  true,
