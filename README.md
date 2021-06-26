@@ -23,6 +23,10 @@ POSTGRES_DB=<db_name>
 BASE_URL=http://localhost:3000
 ```
 
+To start the containers in detached mode, use `docker-compose up -d`.
+
+To stop the containers, use `docker-compose down`.
+
 The website should be available in `http://localhost:3000`.
 
 ## Contributing
