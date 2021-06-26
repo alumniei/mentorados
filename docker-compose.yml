@@ -16,6 +16,9 @@ services:
       - db
     entrypoint: ["/app/entrypoint.sh"]
     command: ["rails", "server", "-b", "0.0.0.0","-p","3000"]
+    volumes:
+      - .:/app
     environment: 
       POSTGRES_USER: "${POSTGRES_USER}"
       POSTGRES_PASSWORD: "${POSTGRES_PASSWORD}"
+      EMAIL_SENDER_ADDRESS: "mentor@alumniei.pt"
