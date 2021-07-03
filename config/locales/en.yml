@@ -23,10 +23,16 @@ en:
         year_in: The first year you enrolled in LEIC/MIEIC.
         year_out: The last year you were enrolled in LEIC/MIEIC.
         guidelines:
+          form: Form
+          content: Content
           clear_sentences: Write clear simple sentences;
           no_acronyms: Avoid using acronyms;
           be_specific: Be specific when sharing information;
           text_length: Too much and too little text is what we want to avoid, aim for 4 to 5 paragraphs;
+          introduce: Introduce yourself;
+          background: Summarise your background;
+          expertise: Highlight your areas of expertise acquired by your life experiences or career;
+          explain: Explain why you joined Mentorados;
       settings:
         theme: Changes the theme of the website to either the 'dark', 'light' or 'system' themes
         locale: Changes the language of the website

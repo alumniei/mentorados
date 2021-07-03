@@ -49,7 +49,6 @@ class User < ApplicationRecord
   end
 
   def self.search_word(word)
-    puts word
     %w[users.name bio_en bio_pt location url_text year_in year_out tags.name->>'pt' tags.name->>'en'].map do |field|
       where(["unaccent(#{field}::text) ILIKE CONCAT('%', unaccent(?), '%')", word])
     end.reduce(&:or).joins(:tags).distinct
