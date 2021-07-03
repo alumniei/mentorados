@@ -10,37 +10,22 @@ sympathetic ear and advise wherever they can.
 
 ## Development
 
-To run this application, you need to have ruby 2.7.1 and a recent version
-(>=10) of postgresql installed.
+### Using Docker
 
-After cloning this repository, run the following command to install
-dependencies:
+After cloning this repository, you can run this application using Docker and docker-compose.
 
-```
-bundle install
-```
-
-Create an environment file `.env.development.local` with the something like
-following:
+First, create an environment file `.env` with something like you see below, which defines the some of the necessary parameters for the app You can set `db_user`, `db_password` and `db_name` to whatever you want:
 
 ```
-DATABASE_URL=postgres://localhost/mentorados_development
+POSTGRES_USER=<db_user>
+POSTGRES_PASSWORD=<db_password>
+POSTGRES_DB=<db_name>
 BASE_URL=http://localhost:3000
 ```
 
-(Tip, you can also use `postgres://<user>:<password>@localhost/mentorados_development` to specify a Postgres user and password.)
+To start the containers in detached mode, use `docker-compose up -d`.
 
-Setup the database:
-
-```
-bin/rails db:create db:migrate
-```
-
-Finally, start the rails server:
-
-```
-bin/rails server
-```
+To stop the containers, use `docker-compose down`.
 
 The website should be available in `http://localhost:3000`.
 
