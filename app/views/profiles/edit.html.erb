@@ -44,7 +44,11 @@
   <div class="field">
     <div class="label"><%= f.label :bio %></div>
     <div class="description"><%= t('helpers.description.user.bio') %></div>
-    <div class="input"><%= f.text_area :bio %></div>
+    <div class="input"><%= f.text_area :bio_en, placeholder: 'English version (mandatory)', required: true %></div>
+  </div>
+
+  <div class="field">
+    <div class="input"><%= f.text_area :bio_pt, placeholder: 'Versão portuguesa' %></div>
   </div>
 
   <div class="field">

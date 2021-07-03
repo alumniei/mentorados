@@ -45,7 +45,11 @@
     </div>
 
     <div class="biography">
-      <%= simple_format mentor.bio %>
+      <% if lang.to_s == "en" %>
+        <%= simple_format mentor.bio_en %>
+      <% else %>
+        <%= simple_format mentor.bio_pt %>
+      <% end %>
     </div>
   </section>
 <% end %>
