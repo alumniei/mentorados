@@ -24,6 +24,6 @@ Se um mentor ou estudante demonstrar comportamento perturbador, o staff pode tom
 
 ## Reportar
 
-Se fores sujeito ou presenciares comportamento inaceitável, ou tenhas qualquer outra preocupação, por favor avisa-nos escrevendo uma mensagem para .
+Se fores sujeito ou presenciares comportamento inaceitável, ou tenhas qualquer outra preocupação, por favor avisa-nos escrevendo uma mensagem para [mentor@alumniei.pt](mailto:mentor@alumniei.pt).
 
 Se sentires que foste injustamente acusado de violar este Código de Conduta, deves avisar-nos, escrevendo uma descrição concisa da razão pela qual a acusação é injusta.
