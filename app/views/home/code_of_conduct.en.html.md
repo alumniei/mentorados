@@ -17,8 +17,7 @@ Students and mentors are expected to behave by the following precepts:
 
 - Respect the availability and contributions of the platform mentors, who offer
   their support pro bono.
-- Respect students time by keeping your profile up to date and letting us know
-  when you are not available to mentor students.
+- Keep your data up to date. Turn your profile as inactive when you are not available to mentor students.
 - Cultivate a network of support and encouragement for each other.
 - Respect confidentiality over the elements and information shared in this
   platform.

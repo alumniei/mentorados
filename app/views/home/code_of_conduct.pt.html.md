@@ -4,7 +4,7 @@ O objetivo principal de [mentor.alumniei.pt](/) é ser inclusivo para toda a com
 
 Este código de conduta delineia quais os comportamentos que esperamos que a comunidade cumpra, bem como as consequências de comportamento inaceitável.
 
-Se fores um alumni ou estudante FEUP/LEIC, nós convidamos-te a participar nesta plataforma para nos ajudar a create um espaço seguro e positivo para partilhar experiências, conhecimento e questões.
+Se fores um alumni ou estudante FEUP/LEIC, nós convidamos-te a participar nesta plataforma para nos ajudar a criar um espaço seguro e positivo para partilhar experiências, conhecimento e questões.
 
 Espera-se que estudantes e mentores se comportem segundo os seguintes preceitos:
 
@@ -20,7 +20,7 @@ Alguns exemplos de comportamentos que não serão tolerados:
 - Postar e/ou mostrar material sexualmente explícito, violento ou inapropriado.
 - Desrespeitar de qualquer modo um membro da comunidade.
 
-Se um mentor ou estudante demonstrar comportamento perturbador, o staff pode tomar qualquer ação que achar apropriada, includindo avisar o transgressor ou bani-lo da plataforma.
+Se um mentor ou estudante demonstrar comportamento perturbador, o staff pode tomar qualquer ação que achar apropriada, incluindo avisar o transgressor ou bani-lo da plataforma.
 
 ## Reportar
 
