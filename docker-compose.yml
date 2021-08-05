@@ -1,24 +1,19 @@
-version: "3.9"
+version: "3.3"
 services:
   db:
     image: postgres:12.6
     environment:
-      POSTGRES_DB: "${POSTGRES_DB}"
-      POSTGRES_USER: "${POSTGRES_USER}"
-      POSTGRES_PASSWORD: "${POSTGRES_PASSWORD}"
-    ports:
-      - "5432:5432"
+      POSTGRES_USER: mentorados
+      POSTGRES_PASSWORD: mentorados
   web:
     build: .
     ports:
-      - "3000:3000"
+      - 3000:3000
     depends_on:
       - db
-    entrypoint: ["/app/entrypoint.sh"]
-    command: ["rails", "server", "-b", "0.0.0.0","-p","3000"]
     volumes:
       - .:/app
-    environment: 
-      POSTGRES_USER: "${POSTGRES_USER}"
-      POSTGRES_PASSWORD: "${POSTGRES_PASSWORD}"
+    environment:
+      DATABASE_URL: "postgres://mentorados:mentorados@db/mentorados"
       EMAIL_SENDER_ADDRESS: "mentor@alumniei.pt"
+      BASE_URL: "http://localhost:3000"
