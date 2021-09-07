@@ -14,14 +14,7 @@ sympathetic ear and advise wherever they can.
 
 After cloning this repository, you can run this application using Docker and docker-compose.
 
-First, create an environment file `.env` with something like you see below, which defines the some of the necessary parameters for the app You can set `db_user`, `db_password` and `db_name` to whatever you want:
-
-```
-POSTGRES_USER=<db_user>
-POSTGRES_PASSWORD=<db_password>
-POSTGRES_DB=<db_name>
-BASE_URL=http://localhost:3000
-```
+You can change the environment variables in `docker-compose.yml`.
 
 To start the containers in detached mode, use `docker-compose up -d`.
 
