@@ -6,7 +6,9 @@ services:
       POSTGRES_USER: mentorados
       POSTGRES_PASSWORD: mentorados
   web:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
     ports:
       - 3000:3000
     depends_on:
