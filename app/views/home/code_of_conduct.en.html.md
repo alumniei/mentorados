@@ -17,8 +17,7 @@ Students and mentors are expected to behave by the following precepts:
 
 - Respect the availability and contributions of the platform mentors, who offer
   their support pro bono.
-- Respect students time by keeping your profile up to date and letting us know
-  when you are not available to mentor students.
+- Keep your data up to date. Turn your profile as inactive when you are not available to mentor students.
 - Cultivate a network of support and encouragement for each other.
 - Respect confidentiality over the elements and information shared in this
   platform.
@@ -40,7 +39,7 @@ from the platform.
 ## Reporting
 
 If you are subject to or witness unacceptable behavior, or have any other
-concerns, please notify us by writing to .
+concerns, please notify us by writing to [mentor@alumniei.pt](mailto:mentor@alumniei.pt).
 
 If you feel you have been unfairly accused of violating this Code of Conduct,
 you should notify with a concise description of your injury.
