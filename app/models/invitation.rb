@@ -2,6 +2,7 @@
 
 Invitation = Struct.new(:email, :invited_by, keyword_init: true) do
   extend ActiveModel::Naming
+  extend ActiveModel::Translation
 
   def self.create(args)
     new(**args).create
@@ -19,7 +20,7 @@ Invitation = Struct.new(:email, :invited_by, keyword_init: true) do
       )
 
       if @user.valid?
-        InvitationsMailer.with(user: @user).confirmation.deliver_now!
+        InvitationsMailer.with(user: @user).confirmation.deliver_now
       end
     end
 

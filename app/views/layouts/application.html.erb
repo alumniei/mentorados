@@ -14,16 +14,26 @@
       <h1><%= link_to_unless_current t('views.home.index.title'), root_path %></h1>
         <nav>
           <ul>
-            <li><%= link_to t('views.layout.navigation.settings'), edit_settings_path %></li>
+            <li><%= link_to_unless_current t('views.layout.navigation.settings'), edit_settings_path %></li>
             <%- if current_user %>
-              <%- if current_user.admin? %><li><%= link_to t('views.layout.navigation.dashboard'), dashboard_path %></li><% end %>
-              <li><%= link_to t('views.layout.navigation.mentors'), mentors_path %></li>
-              <%- if current_user.mentor? %><li><%= link_to t('views.layout.navigation.profile'), edit_profile_path %></li><% end %>
+              <%- if current_user.admin? %><li><%= link_to_unless_current t('views.layout.navigation.dashboard'), dashboard_path %></li><% end %>
+              <li><%= link_to_unless_current t('views.layout.navigation.mentors'), mentors_path %></li>
+              <%- if current_user.mentor? %><li><%= link_to_unless_current t('views.layout.navigation.profile'), edit_profile_path %></li><% end %>
               <li><%= button_to t('views.layout.navigation.logout'), session_path, method: :delete %></li>
             <% end %>
           </ul>
         </nav>
     </header>
     <%= yield %>
+
+    <footer>
+      <ul>
+        <li><%= link_to t('views.footer.privacy'), privacy_path %></li>
+        <li><%= link_to t('views.footer.cookies'), cookies_path %></li>
+        <li><%= link_to t('views.footer.conduct'), code_of_conduct_path %></li>
+        <li><%= link_to t('views.footer.source'), "https://github.com/alumniei/mentorados" %></li>
+        <li><%= link_to t('views.footer.developer'), "https://alumniei.pt" %></li>
+      </ul>
+    </footer>
   </body>
 </html>

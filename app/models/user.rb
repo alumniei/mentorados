@@ -66,7 +66,7 @@ class User < ApplicationRecord
   private
 
   def validate_feup_email
-    return if email&.split('@')&.last&.casecmp('fe.up.pt')&.zero?
+    return if %w[fe.up.pt edu.fe.up.pt].include?(email&.split('@')&.last&.downcase)
 
     errors.add(:email, :feup_address_required)
   end

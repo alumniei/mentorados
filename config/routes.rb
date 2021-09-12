@@ -11,6 +11,9 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :password_recoveries, only: %i[create new show]
+  resources :passwords, only: %i[create]
+
   resource :dashboard, only: %i[show]
   resources :mentors, only: %i[show index]
   resource :session, only: %i[create new destroy]

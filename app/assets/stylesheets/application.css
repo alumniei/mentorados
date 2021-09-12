@@ -178,3 +178,8 @@ nav input[type=submit] {
   height: auto;
   padding: 0;
 }
+
+footer {
+  border-top: 1px solid var(--fgcolor);
+  margin-top: 2rem;
+}
