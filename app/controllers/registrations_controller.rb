@@ -14,17 +14,9 @@ class RegistrationsController < ApplicationController
   def create
     authorize :registration
 
-    User.transaction do
-      @user = User.student.confirmation_pending.create(create_params)
+    AccountRegistrationJob.perform_later create_params
 
-      if @user.valid?
-        RegistrationsMailer.with(user: @user).confirmation.deliver_now!
-
-        render status: :created
-      else
-        render :new, status: :bad_request
-      end
-    end
+    render status: :created
   end
 
   def new

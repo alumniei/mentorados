@@ -1,0 +1,24 @@
+<%- if @password.valid? %>
+  <h1><%= t 'views.password_recoveries.show.title' %></h1>
+
+  <p><%= t 'views.password_recoveries.show.help' %></p>
+
+  <p><%= t 'views.password_recoveries.show.requirements' %></p>
+
+  <%= form_with model: @password, url: passwords_path do |f| %>
+    <%= f.hidden_field :token %>
+
+    <%= f.password_field :password, required: true, minlength: 10 %>
+    <%= f.submit %>
+  <% end %>
+<%- else %>
+  <h1><%= t 'views.password_recoveries.show.wrong_title' %></h1>
+
+  <p>
+    <%= t 'views.password_recoveries.show.wrong_description' %>
+  </p>
+
+  <p>
+    <%= link_to t('views.password_recoveries.show.wrong_reset'), new_password_recovery_path %>
+  </p>
+<%- end %>

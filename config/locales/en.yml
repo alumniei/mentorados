@@ -6,9 +6,14 @@ en:
           attributes:
             email:
               taken: "This email address has already been registered"
-              feup_address_required: "You must use an email address ending in @fe.up.pt"
+              feup_address_required: "You must use an email address ending in @fe.up.pt or @edu.fe.up.pt"
             password:
               blank: "Password cannot be blank"
+        session:
+          attributes:
+            base:
+              invalid_credentials: "Wrong email/password combination"
+
   helpers:
     description:
       user:
@@ -32,7 +37,7 @@ en:
           introduce: Introduce yourself;
           background: Summarise your background;
           expertise: Highlight your areas of expertise acquired by your life experiences or career;
-          explain: Explain why you joined Mentorados;
+          explain: Explain why you joined this mentorship program;
       settings:
         theme: Changes the theme of the website to either the 'dark', 'light' or 'system' themes
         locale: Changes the language of the website
@@ -51,14 +56,28 @@ en:
         locale: Language
     submit:
       user:
-        create: "Register"
-        update: "Update"
+        create: Register
+        update: Update
+      session:
+        create: Login
+      password_recovery:
+        create: Reset password
+      password:
+        create: Update password
 
   registrations_mailer:
     confirmation:
-      subject: Welcome to mentor.alumniei.pt
+      subject: Welcome to the AlumniEI mentorship program
+    already_registered:
+      subject: Registration on the AlumniEI mentorship program
 
   views:
+    footer:
+      cookies: Cookie policy
+      privacy: Privacy policy
+      conduct: Code of conduct
+      source: Source code
+      developer: Made by AlumniEI
     dashboard:
       mentors:
         invite: Invite someone to be a mentor, by email
@@ -73,7 +92,7 @@ en:
         title: Students
     home:
       index:
-        title: AlumniEI mentors
+        title: AlumniEI mentorship program
         code_of_conduct: code of conduct
         students:
           login: Login
@@ -106,11 +125,16 @@ en:
         settings: Settings
     registrations:
       new:
+        title: Create an account as a student
         restriction: |
-          Registration is limited to MIEIC students. We restrict this
-          by only allowing sign-ups from @fe.up.pt emails. If you lost
-          your access to your institutional email account, contact us
+          Registration is limited to MIEIC students. We restrict this by only
+          allowing sign-ups from @fe.up.pt or @edu.fe.up.pt addresses. If you
+          lost your access to your institutional email account, contact us
           so we can help: %{href}.
+
+        want_to_be_a_mentor: |
+          If you want to register as a mentor, do not use this form. Contact us
+          directly via %{href}.
         existing_account: |
           Already have an account?
         code_of_conduct: code of conduct
@@ -122,8 +146,48 @@ en:
         login: Login
       show:
         title: Confirm your student account
+      create:
+        title: Student account created
+        description: |
+          We sent you a message to the specified email address with
+          instructions on how to complete the registration process.
+        help: |
+          If you didn't get the message or if you're having any trouble
+          completing the registration process, contact us by email: %{href}.
     sessions:
       new:
         title: Login
         no_account: Don't have an account yet?
+        forgot_password: Did you forget your password?
         register: Register
+        recover_password: Reset it
+    password_recoveries:
+      new:
+        title: Reset your password
+        remembered_password: Did you remember your password?
+        no_account: Don't have an account yet?
+        register: Register
+      create:
+        title: Password reset email sent
+        sent: |
+        description: |
+          If there is an account with the specified email, you will
+          receive a message from us containing a password reset link.
+          Follow its instructions and you'll be able to set a new password.
+        no_account: |
+          If there is no account matching the specified email, no message will
+          be sent. If you're having trouble resetting your password, contact us
+          so we can help: %{href}.
+      show:
+        title: Set your new password
+        help: |
+          Once you update your password, you will be able to use it to login.
+          We recommend that you use a password manager.
+        requirements: Your password must be at least 10 characters long.
+        wrong_title: Invalid password recovery link
+        wrong_description: |
+          The link you clicked is invalid. It may have expired or it may have already been used.
+        wrong_reset: Restart the password reset process
+    passwords:
+      update:
+        success: Password successfully changed. You can now login.

@@ -1,0 +1,29 @@
+<h1><%= t 'views.password_recoveries.new.title' %></h1>
+
+<%= form_with model: @password, url: password_recoveries_path, class: "new-password-form" do |f| %>
+  <%- if @password.errors.any? %>
+    <ul class="password-recoveries-errors">
+      <% @password.errors.each do |_, error| %>
+        <li><%= error %></li>
+      <% end %>
+    </ul>
+  <%- end %>
+
+  <div>
+    <%= f.label :email %>
+    <%= f.email_field :email, placeholder: "email@fe.up.pt", required: true %>
+  </div>
+
+  <%= f.submit %>
+<% end %>
+
+<p>
+  <%= t 'views.password_recoveries.new.remembered_password' %>
+  <%= link_to t('views.password_recoveries.new.login'), new_session_path %>
+</p>
+
+<p>
+  <%= t 'views.password_recoveries.new.no_account' %>
+  <%= link_to t('views.password_recoveries.new.register'), new_registration_path %>
+</p>
+

@@ -6,13 +6,18 @@ pt:
           attributes:
             email:
               taken: "Este endereço de email já está registado"
-              feup_address_required: "Deves utilizar um endereço de email terminado em @fe.up.pt"
+              feup_address_required: "Deves utilizar um endereço de email terminado em @fe.up.pt ou @edu.fe.up.pt"
             password:
               blank: "Tens de preencher uma palavra passe"
+        session:
+          attributes:
+            base:
+              invalid_credentials: "Combinação email/senha errada"
+
   helpers:
     description:
       user:
-        active: Só os membros activos são listados na plataforma. Marca-te como inactivo se não quiseres ser contactado por estudantes.
+        active: Só membres actives são listades na plataforma. Marca-te como inactive se não quiseres ser contactade por estudantes.
         bio: 'A tua biografia. Foca-te nas decisões de carreira sobre as quais poderias ter tido questões quando eras estudante. Abaixo estão algumas indicações:'
         tags: Etiquetas que se apliquem às experiências que viveste. Selecciona todas as que são ou já foram relevantes.
         location: 'A tua localização actual, no formato "cidade, país". Exemplo: Porto, Portugal.'
@@ -27,12 +32,12 @@ pt:
           content: Conteúdo
           clear_sentences: Escreve frases simples e claras;
           no_acronyms: Evita usar acrónimos;
-          be_specific: Sê específico quando partilhares informação;
-          text_length: Demasiado ou muito pouco texto é que queremos evitar, aponta para 4 ou 5 parágrafos;
+          be_specific: Sê específique quando partilhares informação;
+          text_length: Demasiado ou muito pouco texto é o que queremos evitar, aponta para 4 ou 5 parágrafos;
           introduce: Apresenta-te;
           background: Resume o teu background;
           expertise: Destaca as tuas áreas de experiência, obtidas nas tuas experiências de vida ou carreira;
-          explain: Explica o porquê de te teres juntado aos Mentorados;
+          explain: Explica o porquê de te teres juntado a este projecto;
       settings:
         theme: Altera o tema da página entre as opções 'light', 'dark' e 'system'
         locale: Altera a língua da página
@@ -51,36 +56,50 @@ pt:
         locale: Língua
     submit:
       user:
-        create: "Registar"
-        update: "Actualizar"
+        create: Registar
+        update: Actualizar
+      session:
+        create: Entrar
+      password_recovery:
+        create: Recuperar senha
+      password:
+        create: Actualizar senha
 
   registrations_mailer:
     confirmation:
-      subject: Bem-vindo a mentor.alumniei.pt
+      subject: Bem-vinde à plataforma de mentoria da AlumniEI
+    already_registered:
+      subject: Registo na plataforma de mentoria da AlumniEI
 
   views:
+    footer:
+      cookies: Política de cookies
+      privacy: Política de privacidade
+      conduct: Código de conduta
+      source: Código fonte
+      developer: Plataforma feita pela AlumniEI
     dashboard:
       mentors:
-        invite: Convida alguém para ser mentor, por email
-        title: Mentores
+        invite: Convida alguém para ser mentore, por email
+        title: Mentories
         pending:
           title: Convites pendentes
         active:
-          title: Activo
+          title: Active
         inactive:
-          title: Inactivo
+          title: Inactive
       students:
         title: Estudantes
     home:
       index:
-        title: Mentores AlumniEI
+        title: Mentoria AlumniEI
         code_of_conduct: Código de conduta
         students:
           login: Entrar
           register: Registar
     invitations:
       new:
-        title: Convidar mentor
+        title: Convidar mentore
       show:
         code_of_conduct: código de conduta
         cookie_policy: política de cookies
@@ -93,7 +112,7 @@ pt:
           Para terminares de criar a tua conta, terás que definir uma palavra passe.
           Depois desse passo pedimos-te que preenchas o teu perfil e ficará tudo pronto
           a utilizar.
-        title: Termina de criar a tua conta de mentor
+        title: Confirma e completa a tua conta
     mentors:
       index:
         attendance: Frequentou entre %{from} e %{to}.
@@ -102,28 +121,73 @@ pt:
       navigation:
         dashboard: Painel de Controlo
         logout: Terminar sessão
-        mentors: Mentores
+        mentors: Mentories
         profile: Perfil
         settings: Definições
     registrations:
       new:
+        title: Cria uma conta de estudante
         restriction: |
           O registo está limitado a estudantes do MIEIC com uma conta de email
-          no domínio @fe.up.pt. Se perdeste o acesso à tua conta de email
-          institucional, contacta-nos para que te possamos ajudar: %{href}.
+          no domínio @fe.up.pt ou @edu.fe.up.pt. Se perdeste o acesso à tua
+          conta de email institucional, contacta-nos para que te possamos
+          ajudar: %{href}.
+        want_to_be_a_mentor: |
+          Se te queres voluntariar como mentore, não uses este formulário.
+          Entra em contacto connosco directamente via %{href}.
         existing_account: |
           Já tens uma conta?
         code_of_conduct: código de conduta
         cookie_policy: política de cookies
         privacy_policy: política de privacidade
         consent: |
-          Ao criares uma conta, estás a concordar com a %{code_of_conduct},
+          Ao criares uma conta, estás a concordar com o %{code_of_conduct},
           a %{cookie_policy} e a %{privacy_policy} da AlumniEI.
         login: Entrar
       show:
         title: Confirma a tua conta de estudante
+      create:
+        title: Conta de estudante criada
+        description: |
+          Enviámos uma mensagem para a conta de email especificada com
+          instruções de como terminar o registo.
+        help: |
+          Caso não tenhas recebido a mensagem ou estejas com algum problema
+          em entrar na plataforma, contacta-nos directamente via %{href}.
     sessions:
       new:
         title: Entrar
         no_account: Ainda não tens uma conta?
-        register: Registar
+        forgot_password: Perdeste a tua senha?
+        register: Regista-te
+        recover_password: Recupera-a
+    password_recoveries:
+      new:
+        title: Recupera a tua password
+        remembered_password: Lembraste-te da tua senha?
+        login: Entrar
+        no_account: Não tens conta?
+        register: Regista-te
+      create:
+        title: Email de recuperação de senha enviado
+        description: |
+          Caso haja uma conta associada ao endereço especificado, enviaremos um
+          email com instruções de como mudar a tua senha.
+        no_account: |
+          Se não houver nenhuma conta associada a esse endereço, não enviaremos
+          nenhum email. Caso estejas com dificuldades a recuperar a tua senha,
+          contacta-nos para que te possamos ajudar: %{href}.
+      show:
+        title: Define a tua nova senha
+        help: |
+          Assim que definires a tua nova senha, poderás utilizá-la para entrar
+          na plataforma. Recomendamos a utilização de um gestor de senhas.
+        requirements: |
+          A tua senha tem de ter pelo menos 10 letras, números, ou símbolos.
+        wrong_title: Código de recuperação de senha inválido
+        wrong_description: |
+          O link em que carregaste não é válido. Pode ter expirado ou já ter sido usado.
+        wrong_reset: Recomeça o processo de recuperação de senha
+    passwords:
+      update:
+        success: Senha actualizada com sucesso. Já podes entrar.
