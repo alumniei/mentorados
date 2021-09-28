@@ -9,6 +9,7 @@ class User < ApplicationRecord
   scope :inactive, -> { where(active: false) }
 
   validates :email, presence: true, uniqueness: { case_sensitive: false }
+  validates :password, length: { minimum: 10 }
   validate :validate_feup_email, on: :create, if: -> { student? }
 
   belongs_to :invited_by, class_name: 'User', optional: true

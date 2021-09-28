@@ -7,7 +7,8 @@ class PasswordsController < ApplicationController
     @password = Password.new(**create_params)
 
     if @password.save
-      redirect_to '/'
+      flash.alert = t('views.passwords.update.success')
+      redirect_to new_session_path
     else
       render 'password_recoveries/show'
     end

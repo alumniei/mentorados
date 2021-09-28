@@ -188,3 +188,6 @@ pt:
         wrong_description: |
           O link em que carregaste não é válido. Pode ter expirado ou já ter sido usado.
         wrong_reset: Recomeça o processo de recuperação de senha
+    passwords:
+      update:
+        success: Senha actualizada com sucesso. Já podes entrar.

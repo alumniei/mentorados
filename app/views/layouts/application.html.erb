@@ -24,6 +24,11 @@
           </ul>
         </nav>
     </header>
+
+    <% if flash.alert %>
+      <div class='alert'><%= flash.alert %></div>
+    <% end %>
+
     <%= yield %>
 
     <footer>

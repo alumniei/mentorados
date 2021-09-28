@@ -188,3 +188,6 @@ en:
         wrong_description: |
           The link you clicked is invalid. It may have expired or it may have already been used.
         wrong_reset: Restart the password reset process
+    passwords:
+      update:
+        success: Password successfully changed. You can now login.

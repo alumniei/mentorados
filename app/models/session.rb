@@ -20,8 +20,13 @@ Session = Struct.new(:email, :password, keyword_init: true) do
 
     @user = User.confirmed.find_by(email: email) || non_existing_user
     @valid = @user.authenticate(password)
+    @error = !@valid
 
     self
+  end
+
+  def error?
+    @error
   end
 
   def valid?
@@ -38,7 +43,7 @@ Session = Struct.new(:email, :password, keyword_init: true) do
 
   def errors
     errors = ActiveModel::Errors.new(self)
-    errors.add(:base, :invalid_credentials) if !valid?
+    errors.add(:base, :invalid_credentials) if error?
     errors
   end
 end
